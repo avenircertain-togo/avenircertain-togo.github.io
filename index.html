@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ensemble Pour un Avenir Certain (EPAC) — Association chrétienne au Togo œuvrant pour l'épanouissement et l'avenir des enfants défavorisés par l'éducation, la santé et la foi.">
+  <meta name="theme-color" content="#1B6B93">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Ensemble Pour un Avenir Certain (EPAC)">
+  <meta property="og:description" content="Association chrétienne au Togo œuvrant pour les enfants défavorisés.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/logo.jpg">
+
+  <title>Ensemble Pour un Avenir Certain (EPAC)</title>
+
+  <!-- Favicon SVG inline -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+
+  <!-- Google Fonts: DM Serif Display + Inter — optimized loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== LOADER ===== -->
+  <div id="loader" class="loader" aria-label="Chargement">
+    <div class="loader__spinner"></div>
+  </div>
+
+  <!-- ===== MOBILE OVERLAY ===== -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- ===== TOP ANNOUNCEMENT BAR ===== -->
+  <aside class="topbar">
+    <div class="topbar__inner">
+      <span class="topbar__badge">❤️ Solidarité Togo</span>
+      <span class="topbar__text">Rejoignez la mission d'espérance pour les enfants vulnérables au Togo</span>
+      <a href="#donation" class="topbar__link">Faire un don direct &rarr;</a>
+    </div>
+  </aside>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="#accueil" class="header__logo" aria-label="Accueil EPAC">
+        <div class="header__logo-frame">
+          <img id="header-logo" src="assets/logo.jpg" alt="Logo EPAC" width="64" height="64">
+        </div>
+        <div class="header__brand">
+          <span class="header__brand-full" id="header-name">Ensemble Pour un Avenir Certain</span>
+          <span class="header__brand-acronym"><span class="badge badge--gold">EPAC</span> Togo</span>
+        </div>
+      </a>
+
+      <!-- Navigation sous forme d'onglets et de boutons -->
+      <nav class="header__nav" id="nav" aria-label="Navigation principale">
+        <ul class="header__nav-list" id="nav-list">
+          <!-- Rempli dynamiquement par JS -->
+        </ul>
+      </nav>
+
+      <button class="header__burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== HERO (asymétrique moderne & valorisant) ===== -->
+    <section class="hero" id="accueil">
+      <div class="hero__image-wrap">
+        <img id="hero-img" src="" alt="" class="hero__image" loading="eager">
+        <div class="hero__image-badge">
+          <span class="hero__badge-icon">✨</span>
+          <div class="hero__badge-text">
+            <strong>Espérance & Dignité</strong>
+            <small>Pour chaque enfant au Togo</small>
+          </div>
+        </div>
+      </div>
+      <div class="hero__content">
+        <div class="hero__tag">
+          <span class="dot"></span> Association Chrétienne Humanitaire
+        </div>
+        <h1 id="hero-headline" class="hero__title"></h1>
+        <p id="hero-sub" class="hero__sub"></p>
+        <div class="hero__actions">
+          <a id="hero-cta" href="#donation" class="btn btn--donate">
+            <span class="btn__heart">💛</span>
+            <span id="hero-cta-text">Faire un don d'amour</span>
+          </a>
+          <a id="hero-cta2" href="#mission" class="btn btn--outline"></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== STATS RIBBON ===== -->
+    <div class="stats" id="stats-ribbon">
+      <!-- Filled by JS -->
+    </div>
+
+    <!-- ===== MISSION (zigzag avec photos valorisantes & coopération) ===== -->
+    <section class="section mission" id="mission">
+      <div class="section__header">
+        <span class="section__eyebrow">Notre Cœur d'Action</span>
+        <h2 id="mission-title" class="section__title"></h2>
+        <p id="mission-verse" class="mission__verse"></p>
+      </div>
+      <div id="mission-blocks" class="mission__blocks">
+        <!-- Filled by JS -->
+      </div>
+    </section>
+
+    <!-- ===== PROGRAMMES (bento grid) ===== -->
+    <section class="section programmes" id="programmes">
+      <div class="section__header">
+        <span class="section__eyebrow">Actions Concrètes</span>
+        <h2 id="prog-title" class="section__title"></h2>
+        <p id="prog-sub" class="section__subtitle"></p>
+      </div>
+      <div id="prog-grid" class="bento">
+        <!-- Filled by JS -->
+      </div>
+    </section>
+
+    <!-- ===== PROJETS PHARES ===== -->
+    <section class="section projets" id="projets">
+      <div class="section__header">
+        <span class="section__eyebrow">Impact Sur Le Terrain</span>
+        <h2 id="proj-title" class="section__title"></h2>
+        <p id="proj-sub" class="section__subtitle"></p>
+      </div>
+      <div id="proj-grid" class="projets__grid">
+        <!-- Filled by JS -->
+      </div>
+    </section>
+
+    <!-- ===== DONATION (Section mise en exergue) ===== -->
+    <section class="section donation" id="donation">
+      <div class="donation__inner">
+        <div class="donation__hero">
+          <div class="donation__hero-media">
+            <img id="don-img" src="" alt="" class="donation__hero-img" loading="lazy">
+            <div class="donation__hero-badge">
+              <span>✨ Votre amour illumine leur avenir</span>
+            </div>
+          </div>
+          <div class="donation__hero-content">
+            <div class="donation__badge">
+              <span class="donation__badge-heart">💛</span> Solidarité & Bénédiction
+            </div>
+            <h2 id="don-title" class="donation__title"></h2>
+            <p id="don-sub" class="donation__subtitle"></p>
+            <blockquote id="don-verse" class="donation__verse"></blockquote>
+          </div>
+        </div>
+
+        <div class="donation__tiers-header">
+          <h3>Choisissez l'impact de votre don :</h3>
+        </div>
+        <div id="don-tiers" class="donation__tiers">
+          <!-- Filled by JS -->
+        </div>
+
+        <div class="donation__box">
+          <h3 class="donation__box-title">Canaux officiels de versement</h3>
+          <p class="donation__box-desc">Chaque don est tracé avec rigueur et transparent dans nos rapports annuels.</p>
+          <div id="don-methods" class="donation__methods">
+            <!-- Filled by JS -->
+          </div>
+          <div class="donation__cta-wrap">
+            <a href="#contact" class="btn btn--donate btn--large">
+              <span>Nous contacter pour finaliser votre don ou parrainage</span>
+              &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TESTIMONIAL RIBBON ===== -->
+    <section class="testimonials" id="testimonials">
+      <div class="section__header section__header--light">
+        <span class="section__eyebrow section__eyebrow--gold">Paroles de Vie</span>
+        <h2 class="section__title section__title--light">Témoignages & Reconnaissance</h2>
+      </div>
+      <div class="testimonials__track" id="testimonial-track">
+        <!-- Filled by JS -->
+      </div>
+      <div class="testimonials__controls">
+        <button class="testimonials__arrow testimonials__arrow--prev" id="testi-prev" aria-label="Témoignage précédent">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <div class="testimonials__dots" id="testimonial-dots"></div>
+        <button class="testimonials__arrow testimonials__arrow--next" id="testi-next" aria-label="Témoignage suivant">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 6 15 12 9 18"/></svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- ===== ARTICLES (Actualités) ===== -->
+    <section class="section articles" id="articles">
+      <div class="section__header">
+        <span class="section__eyebrow">Nouvelles Récentes</span>
+        <h2 id="art-title" class="section__title"></h2>
+        <p id="art-sub" class="section__subtitle"></p>
+      </div>
+      <div id="art-list" class="articles__list">
+        <!-- Filled by JS -->
+      </div>
+    </section>
+
+    <!-- ===== BLOG (Réflexions & Foi) ===== -->
+    <section class="section blog" id="blog">
+      <div class="section__header">
+        <span class="section__eyebrow">Réflexions & Chroniques</span>
+        <h2 id="blog-title" class="section__title"></h2>
+        <p id="blog-sub" class="section__subtitle"></p>
+      </div>
+      <div id="blog-grid" class="blog__grid">
+        <!-- Filled by JS -->
+      </div>
+    </section>
+
+    <!-- ===== VIDÉOS ===== -->
+    <section class="section medias" id="medias">
+      <div class="section__header">
+        <span class="section__eyebrow">Vidéothèque</span>
+        <h2 id="vid-title" class="section__title"></h2>
+        <p id="vid-sub" class="section__subtitle"></p>
+      </div>
+      <div id="vid-scroll" class="medias__scroll">
+        <!-- Filled by JS -->
+      </div>
+    </section>
+
+    <!-- ===== TÉLÉCHARGEMENTS ===== -->
+    <section class="section downloads" id="downloads">
+      <div class="section__header">
+        <span class="section__eyebrow">Transparence</span>
+        <h2 id="dl-title" class="section__title"></h2>
+      </div>
+      <ul id="dl-list" class="downloads__list">
+        <!-- Filled by JS -->
+      </ul>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="contact" id="contact">
+      <div class="contact__inner">
+        <div class="contact__info">
+          <span class="section__eyebrow section__eyebrow--gold">À Votre Écoute</span>
+          <h2 id="ct-title" class="contact__title"></h2>
+          <p id="ct-sub" class="contact__subtitle"></p>
+          <address id="ct-details" class="contact__details">
+            <!-- Filled by JS -->
+          </address>
+          <div id="ct-socials" class="contact__socials">
+            <!-- Filled by JS -->
+          </div>
+        </div>
+        <form class="contact__form" id="contact-form" novalidate>
+          <div class="form__group">
+            <label for="cf-name">Nom complet</label>
+            <input type="text" id="cf-name" name="name" placeholder="Ex: Jean Koffi" required>
+          </div>
+          <div class="form__group">
+            <label for="cf-email">Adresse e-mail</label>
+            <input type="email" id="cf-email" name="email" placeholder="votre@email.com" required>
+          </div>
+          <div class="form__group">
+            <label for="cf-subject">Objet de votre message</label>
+            <select id="cf-subject" name="subject" class="form__select">
+              <option value="donation">Faire un don / Soutenir un projet</option>
+              <option value="parrainage">Parrainer un enfant</option>
+              <option value="partenariat">Partenariat (ONG, Église, Entreprise)</option>
+              <option value="benevolat">Devenir bénévole / Mission terrain</option>
+              <option value="autre">Autre demande</option>
+            </select>
+          </div>
+          <div class="form__group">
+            <label for="cf-message">Votre message</label>
+            <textarea id="cf-message" name="message" rows="5" placeholder="Partagez vos questions, intentions ou encouragements…" required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">Envoyer le message avec confiance</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" id="footer">
+    <div class="footer__inner">
+      <div class="footer__brand-block">
+        <div class="footer__logo-wrap">
+          <img id="footer-logo" class="footer__logo" src="assets/logo.jpg" alt="Logo EPAC" width="90" height="90">
+        </div>
+        <h3 class="footer__title">Ensemble Pour un Avenir Certain (EPAC)</h3>
+        <p class="footer__motto">Association chrétienne au Togo œuvrant pour l'épanouissement des enfants défavorisés</p>
+      </div>
+
+      <p id="footer-verse" class="footer__verse"></p>
+
+      <div class="footer__links" id="footer-links">
+        <!-- Filled by JS -->
+      </div>
+      <p id="footer-copy" class="footer__copy"></p>
+    </div>
+  </footer>
+
+  <!-- ===== BACK TO TOP ===== -->
+  <button class="back-to-top" id="back-to-top" aria-label="Retour en haut">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>

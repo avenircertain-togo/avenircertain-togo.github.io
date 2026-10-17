@@ -1,0 +1,312 @@
+# ============================================================
+#  Sveltia CMS — config.yml
+#  Administration du site "Ensemble Pour un Avenir Certain (EPAC)"
+# ============================================================
+
+backend:
+  name: github
+  repo: avenircertain-togo/avenircertain-togo.github.io
+  branch: main
+  base_url: https://sveltia-cms-auth.razkby.workers.dev
+
+locale: fr
+
+media_folder: images/uploads
+public_folder: /images/uploads
+
+# ============================================================
+#  COLLECTION — édite content/site.json
+# ============================================================
+collections:
+
+  - name: contenu
+    label: "📄 Contenu du site"
+    files:
+
+      - name: site-content
+        label: "⚙️ Tout le contenu"
+        file: content/site.json
+        format: json
+        fields:
+
+          # ---------- site ----------
+          - label: "🌐 Paramètres du site"
+            name: site
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Nom complet du site", name: name,      widget: string }
+              - { label: "Nom court / Acronyme", name: shortName,  widget: string }
+              - { label: "Slogan",              name: tagline,    widget: string }
+              - { label: "Logo",                name: logo,       widget: image, choose_url: true }
+              - label: "Boutons de navigation"
+                name: nav
+                widget: list
+                label_singular: "Bouton"
+                summary: "{{fields.label}} → {{fields.href}}"
+                fields:
+                  - { label: "Libellé",         name: label, widget: string }
+                  - { label: "Ancre (#section)", name: href,  widget: string }
+                  - { label: "Mettre en exergue (ex: Donation)", name: isCta, widget: boolean, required: false, default: false }
+
+          # ---------- hero ----------
+          - label: "🏠 Section Héros (accueil)"
+            name: hero
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Titre principal",       name: headline,    widget: string }
+              - { label: "Sous-titre",            name: subheadline, widget: text }
+              - label: "Bouton principal (Donation)"
+                name: cta
+                widget: object
+                fields:
+                  - { label: "Texte du bouton", name: text, widget: string }
+                  - { label: "Lien",            name: href, widget: string }
+              - label: "Bouton secondaire"
+                name: ctaSecondary
+                widget: object
+                fields:
+                  - { label: "Texte du bouton", name: text, widget: string }
+                  - { label: "Lien",            name: href, widget: string }
+              - { label: "Image principale (Unsplash ou uploadée)", name: image, widget: image, choose_url: true }
+              - { label: "Description de l'image (alt)", name: imageAlt, widget: string }
+
+          # ---------- stats ----------
+          - label: "📊 Chiffres-clés"
+            name: stats
+            widget: list
+            label_singular: "Statistique"
+            summary: "{{fields.value}}{{fields.suffix}} — {{fields.label}}"
+            collapsed: true
+            fields:
+              - { label: "Valeur numérique",   name: value,  widget: number, value_type: int }
+              - { label: "Suffixe (+, %, ans)", name: suffix, widget: string, required: false, default: "" }
+              - { label: "Libellé",            name: label,  widget: string }
+
+          # ---------- mission ----------
+          - label: "✝️ Section Mission & Coopération"
+            name: mission
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Titre de section",   name: title, widget: string }
+              - { label: "Verset biblique",    name: verse, widget: text }
+              - label: "Piliers d'action"
+                name: blocks
+                widget: list
+                label_singular: "Pilier"
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Titre",          name: title,    widget: string }
+                  - { label: "Texte",          name: text,     widget: text }
+                  - { label: "Image",          name: image,    widget: image, choose_url: true }
+                  - { label: "Texte alt image", name: imageAlt, widget: string }
+
+          # ---------- programmes ----------
+          - label: "📋 Section Programmes"
+            name: programmes
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Titre de section", name: title,    widget: string }
+              - { label: "Sous-titre",       name: subtitle, widget: string }
+              - label: "Programmes"
+                name: items
+                widget: list
+                label_singular: "Programme"
+                summary: "{{fields.icon}} {{fields.title}}"
+                fields:
+                  - { label: "Titre",          name: title, widget: string }
+                  - { label: "Description",    name: text,  widget: text }
+                  - { label: "Icône (emoji)",  name: icon,  widget: string }
+                  - label: "Taille de la tuile"
+                    name: size
+                    widget: select
+                    options:
+                      - { label: "Petite",   value: small }
+                      - { label: "Moyenne",  value: medium }
+                      - { label: "Grande",   value: large }
+                    default: small
+
+          # ---------- projets ----------
+          - label: "🏗️ Section Projets Phares"
+            name: projets
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Titre de section", name: title,    widget: string }
+              - { label: "Sous-titre",       name: subtitle, widget: string }
+              - label: "Liste des projets"
+                name: items
+                widget: list
+                label_singular: "Projet"
+                summary: "{{fields.title}} ({{fields.status}})"
+                fields:
+                  - { label: "Titre du projet",      name: title,       widget: string }
+                  - { label: "Catégorie",            name: category,    widget: string }
+                  - { label: "Statut",               name: status,      widget: string }
+                  - { label: "Progression (en %)",   name: progress,    widget: number, value_type: int }
+                  - { label: "Objectif financier",   name: target,      widget: string }
+                  - { label: "Montant collecté",     name: raised,      widget: string }
+                  - { label: "Image du projet",      name: image,       widget: image, choose_url: true }
+                  - { label: "Texte alt image",      name: imageAlt,    widget: string }
+                  - { label: "Description complète", name: description, widget: text }
+
+          # ---------- donation ----------
+          - label: "💛 Section Donation"
+            name: donation
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Titre",          name: title,    widget: string }
+              - { label: "Sous-titre",     name: subtitle, widget: string }
+              - { label: "Verset biblique", name: verse,    widget: text }
+              - label: "Paliers de dons"
+                name: tiers
+                widget: list
+                label_singular: "Palier"
+                summary: "{{fields.amount}} ({{fields.fcfa}})"
+                fields:
+                  - { label: "Montant en €",      name: amount, widget: string }
+                  - { label: "Équivalent en FCFA", name: fcfa,   widget: string }
+                  - { label: "Impact concret",    name: impact, widget: text }
+              - label: "Canaux de paiement"
+                name: methods
+                widget: list
+                label_singular: "Canal"
+                summary: "{{fields.name}}"
+                fields:
+                  - { label: "Nom du canal", name: name,    widget: string }
+                  - { label: "Icône",        name: icon,    widget: string }
+                  - { label: "Détails",      name: details, widget: text }
+
+          # ---------- articles (actualités) ----------
+          - label: "📰 Section Actualités"
+            name: articles
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Titre de section", name: title,    widget: string }
+              - { label: "Sous-titre",       name: subtitle, widget: string }
+              - label: "Articles"
+                name: items
+                widget: list
+                label_singular: "Article"
+                summary: "{{fields.date}} — {{fields.title}}"
+                fields:
+                  - { label: "Titre",                 name: title,    widget: string }
+                  - { label: "Date de publication",   name: date,     widget: datetime, format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false }
+                  - { label: "Image",                 name: image,    widget: image, choose_url: true }
+                  - { label: "Texte alt. de l'image",  name: imageAlt, widget: string }
+                  - { label: "Texte de l'article",    name: excerpt,  widget: text }
+                  - { label: "Lien externe (optionnel)", name: link,  widget: string, required: false, default: "#" }
+
+          # ---------- blog ----------
+          - label: "✍️ Section Blog (Foi & Espérance)"
+            name: blog
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Titre de section", name: title,    widget: string }
+              - { label: "Sous-titre",       name: subtitle, widget: string }
+              - label: "Articles de blog"
+                name: items
+                widget: list
+                label_singular: "Chronique"
+                summary: "{{fields.title}} ({{fields.category}})"
+                fields:
+                  - { label: "Titre",         name: title,    widget: string }
+                  - { label: "Auteur",        name: author,   widget: string }
+                  - { label: "Date",          name: date,     widget: datetime, format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false }
+                  - { label: "Catégorie",     name: category, widget: string }
+                  - { label: "Image",         name: image,    widget: image, choose_url: true }
+                  - { label: "Texte alt",     name: imageAlt, widget: string }
+                  - { label: "Texte complet", name: excerpt,  widget: text }
+
+          # ---------- videos ----------
+          - label: "🎬 Section Médias / Vidéos"
+            name: videos
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Titre de section", name: title,    widget: string }
+              - { label: "Sous-titre",       name: subtitle, widget: string }
+              - label: "Vidéos"
+                name: items
+                widget: list
+                label_singular: "Vidéo"
+                summary: "🎬 {{fields.title}}"
+                fields:
+                  - { label: "Titre de la vidéo",    name: title,     widget: string }
+                  - { label: "Lien YouTube (embed)",  name: embedUrl,  widget: string }
+                  - { label: "Miniature",             name: thumbnail, widget: image, choose_url: true }
+
+          # ---------- downloads ----------
+          - label: "📎 Section Téléchargements"
+            name: downloads
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Titre de section", name: title, widget: string }
+              - label: "Fichiers à télécharger"
+                name: items
+                widget: list
+                label_singular: "Document"
+                summary: "📎 {{fields.title}} ({{fields.type}}, {{fields.size}})"
+                fields:
+                  - { label: "Titre du document",   name: title,       widget: string }
+                  - { label: "Description courte",   name: description, widget: string }
+                  - { label: "Fichier (PDF, DOC…)",  name: file,        widget: file }
+                  - { label: "Type (PDF, DOC…)",     name: type,        widget: string, default: "PDF" }
+                  - { label: "Taille du fichier",    name: size,        widget: string }
+
+          # ---------- testimonials ----------
+          - label: "💬 Témoignages"
+            name: testimonials
+            widget: list
+            label_singular: "Témoignage"
+            summary: "{{fields.author}} — {{fields.role}}"
+            collapsed: true
+            fields:
+              - { label: "Citation",         name: quote,  widget: text }
+              - { label: "Nom de l'auteur",  name: author, widget: string }
+              - { label: "Fonction / Lieu",  name: role,   widget: string }
+
+          # ---------- contact ----------
+          - label: "📞 Section Contact"
+            name: contact
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Titre",          name: title,    widget: string }
+              - { label: "Sous-titre",     name: subtitle, widget: string }
+              - { label: "Adresse e-mail", name: email,    widget: string }
+              - { label: "Téléphone",      name: phone,    widget: string }
+              - { label: "Adresse postale", name: address,  widget: string }
+              - label: "Réseaux sociaux"
+                name: socials
+                widget: list
+                label_singular: "Réseau"
+                summary: "{{fields.platform}} → {{fields.url}}"
+                fields:
+                  - { label: "Nom de la plateforme", name: platform, widget: string }
+                  - { label: "URL du profil",        name: url,      widget: string }
+                  - label: "Icône"
+                    name: icon
+                    widget: select
+                    options:
+                      - { label: "Facebook",  value: facebook }
+                      - { label: "Instagram", value: instagram }
+                      - { label: "YouTube",   value: youtube }
+                      - { label: "TikTok",    value: tiktok }
+                      - { label: "WhatsApp",  value: whatsapp }
+
+          # ---------- footer ----------
+          - label: "🔻 Pied de page"
+            name: footer
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Texte de copyright", name: copyright, widget: string }
+              - { label: "Verset biblique",    name: verse,     widget: text }

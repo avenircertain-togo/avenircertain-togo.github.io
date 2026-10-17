@@ -1,0 +1,345 @@
+{
+  "site": {
+    "name": "Ensemble Pour un Avenir Certain (EPAC)",
+    "shortName": "EPAC Togo",
+    "tagline": "Association chrétienne au Togo œuvrant pour l'épanouissement et l'avenir des enfants défavorisés",
+    "logo": "assets/logo.jpg",
+    "nav": [
+      { "label": "Accueil",     "href": "#accueil" },
+      { "label": "Mission",     "href": "#mission" },
+      { "label": "Programmes",  "href": "#programmes" },
+      { "label": "Projets",     "href": "#projets" },
+      { "label": "Actualités",  "href": "#articles" },
+      { "label": "Blog",        "href": "#blog" },
+      { "label": "Donation",    "href": "#donation", "isCta": true },
+      { "label": "Contact",     "href": "#contact" }
+    ]
+  },
+
+  "hero": {
+    "headline": "Chaque enfant togolais porte en lui la promesse d'un avenir radieux",
+    "subheadline": "Bâtissons ensemble des ponts d'espérance, de dignité et d'excellence pour les enfants vulnérables au Togo — par une éducation de qualité, la santé communautaire et l'amour fraternel en Christ.",
+    "cta":          { "text": "Faire un don d'amour", "href": "#donation" },
+    "ctaSecondary": { "text": "Découvrir notre mission", "href": "#mission" },
+    "image": "images/uploads/close-up-little-girl-portrait-outdoors.jpg",
+    "imageAlt": "Petite fille togolaise rayonnante d'espérance et de confiance"
+  },
+
+  "stats": [
+    { "value": 450,  "suffix": "+", "label": "Enfants parrainés et scolarisés" },
+    { "value": 18,   "suffix": "",  "label": "Écoles et villages partenaires" },
+    { "value": 10,   "suffix": " ans", "label": "D'engagement chrétien continu" },
+    { "value": 98,   "suffix": "%", "label": "Taux de réussite aux examens" }
+  ],
+
+  "mission": {
+    "title": "Notre Mission & Nos Valeurs",
+    "verse": "« Laissez les petits enfants venir à moi, et ne les empêchez pas, car le Royaume de Dieu est pour ceux qui leur ressemblent. » — Marc 10:14",
+    "blocks": [
+      {
+        "title": "Éducation d'excellence & Dignité",
+        "text": "Nous croyons que l'éducation est le levier le plus puissant pour briser le cycle de la pauvreté. À Lomé, dans les Plateaux et la région Maritime, nous prenons intégralement en charge les frais de scolarité, les uniformes neufs, les manuels et les fournitures pour des centaines d'enfants. Des professeurs et tuteurs bénévoles assurent des séances de soutien personnalisé pour cultiver la confiance, la créativité et le goût de la réussite chez chaque élève.",
+        "image": "images/uploads/medium-shot-kid-writing-board.jpg",
+        "imageAlt": "Élève africain participant activement au tableau noir en classe"
+      },
+      {
+        "title": "Santé, Nutrition & Bien-être intégral",
+        "text": "Grandir en pleine santé est un droit fondamental. Grâce à nos cantines scolaires solidaires, plus de 350 repas chauds et nutritifs, préparés avec des denrées achetées directement aux cultivatrices locales, sont servis chaque jour d'école. Nous organisons également des bilans pédiatriques réguliers, des campagnes de déparasitage, de soins bucco-dentaires et de vaccination pour garantir à chaque enfant la vitalité nécessaire à son plein épanouissement.",
+        "image": "images/uploads/young-african-sisters.jpg",
+        "imageAlt": "Jeunes sœurs africaines unies et rayonnantes de santé"
+      },
+      {
+        "title": "Coopération internationale & Fraternité chrétienne",
+        "text": "Notre action est portée par une belle alliance de solidarité : des équipes togolaises investies sur le terrain, main dans la main avec des bénévoles, donateurs et partenaires européens qui partagent notre foi et nos valeurs. Cette coopération interculturelle favorise l'échange de compétences, l'accueil de missions humanitaires médicales et pédagogiques, et tisse des liens fraternels durables entre les peuples autour de l'amour du prochain.",
+        "image": "images/uploads/close-up-team-hand-shake.jpg",
+        "imageAlt": "Poignée de mains solidaire scellant l'alliance entre équipes locales et partenaires"
+      }
+    ]
+  },
+
+  "programmes": {
+    "title": "Nos Programmes d'Action",
+    "subtitle": "Une approche holistique pour l'épanouissement de l'enfant et de sa communauté",
+    "items": [
+      {
+        "title": "Parrainage scolaire individuel",
+        "text": "Lier un bienfaiteur à un enfant togolais pour garantir son parcours scolaire complet du primaire aux études supérieures, avec un suivi pédagogique rigoureux et des échanges de nouvelles réguliers.",
+        "icon": "🎓",
+        "size": "large"
+      },
+      {
+        "title": "Cantines scolaires solidaires",
+        "text": "Un déjeuner équilibré quotidien qui élimine la faim en classe et stimule l'économie locale par l'achat de vivres auprès des coopératives agricoles régionales.",
+        "icon": "🍲",
+        "size": "small"
+      },
+      {
+        "title": "Camps de vacances & Éveil spirituel",
+        "text": "Des colonies bibliques enrichissantes combinant jeux, ateliers manuels, louange et apprentissage des valeurs universelles de paix, d'honnêteté et d'amour chrétien.",
+        "icon": "⛺",
+        "size": "small"
+      },
+      {
+        "title": "Centre d'apprentissage professionnel",
+        "text": "Filières en couture, menuiserie, agro-écologie et outils numériques offrant aux jeunes déscolarisés des compétences pratiques pour s'insérer avec fierté dans le tissu économique.",
+        "icon": "🛠️",
+        "size": "medium"
+      },
+      {
+        "title": "Points d'eau potable villageois",
+        "text": "Forages modernes équipés de pompes solaires et formation de comités locaux de gestion pour préserver la santé des familles contre les maladies hydriques.",
+        "icon": "💧",
+        "size": "medium"
+      },
+      {
+        "title": "Micro-crédits & Autonomie des mères",
+        "text": "Autonomisation économique des mamans par des formations en gestion d'activités génératrices de revenus et l'octroi de fonds d'amorçage solidaires.",
+        "icon": "🤝",
+        "size": "small"
+      }
+    ]
+  },
+
+  "projets": {
+    "title": "Nos Projets Phares 2026-2027",
+    "subtitle": "Des réalisations d'envergure nécessitant la mobilisation de tous nos partenaires",
+    "items": [
+      {
+        "title": "Construction de la Maison de l'Espérance à Kpalimé",
+        "category": "Infrastructures",
+        "status": "En cours de financement",
+        "progress": 65,
+        "target": "25 000 € / 16 400 000 FCFA",
+        "raised": "16 250 € collectés",
+        "image": "images/uploads/construction-maison-esperance.jpg",
+        "imageAlt": "Chantier de maçonnerie et construction du centre communautaire à Kpalimé",
+        "description": "Création d'un centre polyvalent avec bibliothèque numérique, salle de tutorat, infirmerie pédiatrique et espace d'accueil pour 120 enfants chaque jour."
+      },
+      {
+        "title": "Forage d'eau potable solaire & maraîchage scolaire à Tsévié",
+        "category": "Eau & Écologie",
+        "status": "Démarrage imminent",
+        "progress": 80,
+        "target": "8 500 € / 5 600 000 FCFA",
+        "raised": "6 800 € collectés",
+        "image": "images/uploads/hero-enfants.jpg",
+        "imageAlt": "Enfants du village joyeux bénéficiant d'un nouveau point d'eau",
+        "description": "Installation d'un château d'eau solaire alimentant l'école primaire et un potager pédagogique maraîcher pour approvisionner la cantine en légumes frais."
+      },
+      {
+        "title": "Équipement informatique et solaire pour 3 collèges ruraux",
+        "category": "Numérique & Énergie",
+        "status": "Recherche de partenaires",
+        "progress": 40,
+        "target": "12 000 € / 7 900 000 FCFA",
+        "raised": "4 800 € collectés",
+        "image": "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=700&q=80",
+        "imageAlt": "Jeunes élèves apprenant sur ordinateur",
+        "description": "Fourniture de 45 ordinateurs portables reconditionnés et panneaux photovoltaïques pour initier les collégiens ruraux aux nouvelles technologies."
+      }
+    ]
+  },
+
+  "donation": {
+    "title": "Soutenez Notre Action — Faites un Don",
+    "subtitle": "Chaque don, petit ou grand, se traduit directement par un changement concret dans la vie d'un enfant au Togo",
+    "verse": "« Que chacun donne comme il l'a résolu en son cœur, sans tristesse ni contrainte ; car Dieu aime celui qui donne avec joie. » — 2 Corinthiens 9:7",
+    "image": "images/uploads/medium-shot-smiley-kid-outdoors.jpg",
+    "imageAlt": "Enfant togolais rayonnant de joie et d'espérance grâce à vos dons",
+    "tiers": [
+      {
+        "amount": "10 €",
+        "fcfa": "6 500 FCFA",
+        "impact": "Un kit scolaire complet (sac, cahiers, stylos, ardoise) et une tenue d'uniforme digne pour un élève du primaire."
+      },
+      {
+        "amount": "25 €",
+        "fcfa": "16 500 FCFA",
+        "impact": "Un mois complet de déjeuners chauds à la cantine scolaire et un bilan de santé médical préventif."
+      },
+      {
+        "amount": "50 €",
+        "fcfa": "33 000 FCFA",
+        "impact": "Un trimestre de parrainage intégral : scolarité, fournitures, soutien scolaire hebdomadaire et suivi médical."
+      },
+      {
+        "amount": "100 €",
+        "fcfa": "65 000 FCFA",
+        "impact": "Financement d'un module de formation professionnelle ou contribution majeure à un puits d'eau potable communautaire."
+      }
+    ],
+    "methods": [
+      {
+        "name": "T-Money & Moov Flooz (Togo)",
+        "icon": "📱",
+        "details": "Numéro officiel EPAC Togo : +228 90 12 34 56 (Préciser votre Nom en motif)"
+      },
+      {
+        "name": "Virement Bancaire (International & UEMOA)",
+        "icon": "🏦",
+        "details": "Banque : Ecobank Togo / RIB disponible sur demande pour délivrance de reçu fiscal"
+      },
+      {
+        "name": "Partenariat & Legs",
+        "icon": "🤝",
+        "details": "Églises, associations, fondations et entreprises : contactez directement notre direction pour conventionner votre soutien"
+      }
+    ]
+  },
+
+  "testimonials": [
+    {
+      "quote": "Grâce au parrainage d'EPAC, mes trois enfants ont pu aller à l'école sans interruption. Le soutien des tuteurs les a fait progresser de manière spectaculaire. Que le Seigneur bénisse chaque bienfaiteur !",
+      "author": "Mme Ama Koffi",
+      "role": "Mère de famille, Kpalimé"
+    },
+    {
+      "quote": "Aujourd'hui, j'ai terminé ma classe de 3ème parmi les premiers du canton. À l'école, la cantine et les livres offerts par EPAC m'ont donné l'énergie et la joie d'étudier. Mon rêve est de devenir médecin pour soigner mon village.",
+      "author": "Koffi Mensah",
+      "role": "Élève parrainé, 14 ans, Atakpamé"
+    },
+    {
+      "quote": "Partir en mission bénévole avec EPAC au Togo a été une leçon de vie. Voir la rigueur financière, la joie rayonnante des enfants et la ferveur des équipes togolaises donne une immense confiance.",
+      "author": "Marie-Claire & Jean Dupont",
+      "role": "Partenaires et marraines en France (Lyon)"
+    },
+    {
+      "quote": "L'association m'a tendu la main lorsque j'avais perdu tout espoir d'apprendre un métier. Après 2 ans au centre de formation en ébénisterie, j'ai ouvert mon atelier et je forme à mon tour deux apprentis.",
+      "author": "Yao Agbéko",
+      "role": "Ancien bénéficiaire, artisan à Lomé"
+    }
+  ],
+
+  "articles": {
+    "title": "Actualités du Terrain",
+    "subtitle": "Les derniers événements et avancées vécus avec nos communautés",
+    "items": [
+      {
+        "title": "Rentrée scolaire 2026 : 80 nouveaux enfants accueillis avec ferveur",
+        "date": "2026-09-20",
+        "image": "images/uploads/group-african-kids-learning-together.jpg",
+        "imageAlt": "Groupe d'enfants africains apprenant ensemble avec enthousiasme",
+        "excerpt": "Une rentrée mémorable pour notre grande famille EPAC ! Grâce à la générosité renouvelée de nos parrains et donateurs, 80 jeunes enfants issus des hameaux reculés ont reçu leurs cartables garnis, uniformes et inscriptions. La joie partagée avec les familles témoigne de la force de la solidarité chrétienne.",
+        "link": "#"
+      },
+      {
+        "title": "Inauguration du nouveau forage solaire d'eau pure à Kpalimé",
+        "date": "2026-07-28",
+        "image": "images/uploads/african-woman-pouring-water-recipient-outdoors.jpg",
+        "imageAlt": "Femme africaine puisant de l'eau claire et pure au village",
+        "excerpt": "L'eau jaillit enfin au cœur du village ! Ce point d'eau sécurisé libère les mamans et les fillettes de longues corvées d'eau et élimine les risques de maladies hydriques pour plus de 600 villageois.",
+        "link": "#"
+      },
+      {
+        "title": "Grand camp biblique d'été : 160 jeunes réunis sous la tente de la joie",
+        "date": "2026-08-15",
+        "image": "images/uploads/full-shot-friends-posing-together.jpg",
+        "imageAlt": "Groupe de jeunes amis rayonnants au camp de vacances EPAC",
+        "excerpt": "Quinze jours intenses de ressourcement, de pièces de théâtre biblique, de chorale et d'initiations manuelles. Les jeunes ont fortifié leur foi et scellé de magnifiques amitiés fraternelles.",
+        "link": "#"
+      }
+    ]
+  },
+
+  "blog": {
+    "title": "Le Blog d'EPAC — Foi, Espérance & Action",
+    "subtitle": "Méditations, réflexions de fond et regards d'espérance sur le développement solidaire au Togo",
+    "items": [
+      {
+        "title": "Pourquoi l'amour chrétien transforme durablement l'éducation",
+        "author": "Pasteur Paul Mensah, Aumônier EPAC",
+        "date": "2026-10-02",
+        "category": "Réflexion spirituelle",
+        "image": "images/uploads/alex-shute-96KCdAOLJJY-unsplash.jpg",
+        "imageAlt": "Bible ouverte et lumière d'espérance symbolisant l'amour chrétien et l'éducation",
+        "excerpt": "Éduquer un enfant ne se limite pas à lui transmettre des connaissances académiques : c'est lui révéler qu'il a une valeur inestimable aux yeux de son Créateur. Cet enracinement dans l'amour guérit les blessures du rejet et suscite des vocations d'hommes et de femmes de paix pour notre nation."
+      },
+      {
+        "title": "De la charité ponctuelle à l'autonomie communautaire : notre modèle",
+        "author": "Équipe de direction EPAC Togo",
+        "date": "2026-08-25",
+        "category": "Vision & Développement",
+        "image": "images/uploads/father-holding-his-little-baby-girl.jpg",
+        "imageAlt": "Père tenant tendrement sa petite fille dans un cadre familial épanoui",
+        "excerpt": "Aider sans assister, bâtir avec les communautés plutôt qu'à leur place : retour sur dix années d'expérience où chaque forage, chaque cantine et chaque atelier est co-géré par les bénéficiaires eux-mêmes pour assurer une pérennité totale."
+      },
+      {
+        "title": "Fraternité sans frontières : quand l'Europe et le Togo s'unissent",
+        "author": "Témoignage croisé",
+        "date": "2026-07-10",
+        "category": "Coopération internationale",
+        "image": "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=600&q=80",
+        "imageAlt": "Mains unies dans un projet solidaire",
+        "excerpt": "Récit d'une mission de formation pédagogique menée conjointement entre enseignants togolais et formateurs bénévoles venus de Suisse et de France. Un enrichissement mutuel où chacun donne et reçoit."
+      }
+    ]
+  },
+
+  "videos": {
+    "title": "Médias & Témoignages Vidéo",
+    "subtitle": "Découvrez le sourire de nos enfants et la réalité vivante de nos actions sur le terrain",
+    "items": [
+      {
+        "title": "Présentation officielle de l'association EPAC Togo",
+        "embedUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+        "thumbnail": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=500&q=80"
+      },
+      {
+        "title": "Une matinée à la cantine scolaire : joie et partage",
+        "embedUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+        "thumbnail": "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=500&q=80"
+      },
+      {
+        "title": "Témoignage de parrains et d'enfants bénéficiaires",
+        "embedUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+        "thumbnail": "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=500&q=80"
+      }
+    ]
+  },
+
+  "downloads": {
+    "title": "Documents & Rapports Officiels",
+    "items": [
+      {
+        "title": "Rapport annuel d'activités & Transparence financière",
+        "description": "Bilan moral, réalisations sur le terrain et état des comptes certifié par commissaire aux comptes.",
+        "file": "assets/documents/rapport-annuel.pdf",
+        "type": "PDF",
+        "size": "2.8 Mo"
+      },
+      {
+        "title": "Dossier de Parrainage & Formulaire d'adhésion",
+        "description": "Guide pratique pour parrainer un enfant ou soutenir un projet éducatif ciblé.",
+        "file": "assets/documents/formulaire-parrainage.pdf",
+        "type": "PDF",
+        "size": "650 Ko"
+      },
+      {
+        "title": "Statuts officiels et reconnaissance légale d'EPAC Togo",
+        "description": "Documents d'enregistrement officiel auprès des ministères de tutelle togolais.",
+        "file": "assets/documents/statuts-epac.pdf",
+        "type": "PDF",
+        "size": "820 Ko"
+      }
+    ]
+  },
+
+  "contact": {
+    "title": "Contactez l'Association",
+    "subtitle": "Pour toute question, demande de parrainage, partenariat ou don, notre équipe est à votre écoute.",
+    "email": "contact@avenircertain.org",
+    "phone": "+228 90 12 34 56 / +228 99 88 77 66",
+    "address": "Siège social : Quartier Bè-Klikamé, Rue de l'Espérance, BP 1234, Lomé — République Togolaise",
+    "socials": [
+      { "platform": "Facebook",  "url": "https://facebook.com/epactogo",   "icon": "facebook" },
+      { "platform": "Instagram", "url": "https://instagram.com/epactogo",  "icon": "instagram" },
+      { "platform": "YouTube",   "url": "https://youtube.com/@epactogo",   "icon": "youtube" },
+      { "platform": "WhatsApp",  "url": "https://wa.me/22890123456",        "icon": "whatsapp" }
+    ]
+  },
+
+  "footer": {
+    "copyright": "© 2026 Ensemble Pour un Avenir Certain (EPAC) — Tous droits réservés.",
+    "verse": "« Car je connais les projets que j'ai formés sur vous, dit l'Éternel, projets de paix et non de malheur, afin de vous donner un avenir et de l'espérance. » — Jérémie 29:11"
+  }
+}
