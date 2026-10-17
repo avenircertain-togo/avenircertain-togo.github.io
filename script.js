@@ -104,65 +104,25 @@
       headerName.textContent = site.name;
     }
 
-    // Navigation buttons (Desktop >= 1160px & Mobile Drawer)
+    // Navigation buttons
     const navList = $('#nav-list');
-    const mobileNavList = $('#mobile-nav-list');
-    const NAV_ICONS = {
-      '#accueil': '🏠',
-      '#mission': '🎯',
-      '#programmes': '📚',
-      '#projets': '🏗️',
-      '#articles': '📰',
-      '#blog': '✍️',
-      '#donation': '💛',
-      '#contact': '✉️'
-    };
+    if (navList && site.nav) {
+      navList.innerHTML = '';
+      site.nav.forEach(item => {
+        const li = document.createElement('li');
+        li.className = 'header__nav-item' + (item.isCta ? ' header__nav-item--cta' : '');
 
-    if (site.nav) {
-      if (navList) {
-        navList.innerHTML = '';
-        site.nav.forEach(item => {
-          const li = document.createElement('li');
-          li.className = 'header__nav-item' + (item.isCta ? ' header__nav-item--cta' : '');
-
-          if (item.isCta) {
-            li.innerHTML = `
-              <a href="${item.href}" class="nav-btn nav-btn--donate">
-                <span class="nav-btn__heart">💛</span>
-                <span>${item.label}</span>
-              </a>`;
-          } else {
-            li.innerHTML = `<a href="${item.href}" class="nav-btn">${item.label}</a>`;
-          }
-          navList.appendChild(li);
-        });
-      }
-
-      if (mobileNavList) {
-        mobileNavList.innerHTML = '';
-        site.nav.forEach(item => {
-          const li = document.createElement('li');
-          li.className = 'mobile-drawer__item';
-          const icon = NAV_ICONS[item.href] || '•';
-
-          if (item.isCta) {
-            li.innerHTML = `
-              <a href="${item.href}" class="mobile-drawer__btn mobile-drawer__btn--donate">
-                <span class="nav-btn__heart">💛</span>
-                <span>${item.label}</span>
-                <span style="margin-left:auto;font-size:0.7rem;padding:2px 8px;border-radius:10px;background:rgba(20,27,45,0.14);font-weight:700;">Priorité</span>
-              </a>`;
-          } else {
-            li.innerHTML = `
-              <a href="${item.href}" class="mobile-drawer__btn">
-                <span class="mobile-drawer__icon">${icon}</span>
-                <span>${item.label}</span>
-                <span style="margin-left:auto;opacity:0.35;font-size:0.85rem;">&rarr;</span>
-              </a>`;
-          }
-          mobileNavList.appendChild(li);
-        });
-      }
+        if (item.isCta) {
+          li.innerHTML = `
+            <a href="${item.href}" class="nav-btn nav-btn--donate">
+              <span class="nav-btn__heart">💛</span>
+              <span>${item.label}</span>
+            </a>`;
+        } else {
+          li.innerHTML = `<a href="${item.href}" class="nav-btn">${item.label}</a>`;
+        }
+        navList.appendChild(li);
+      });
     }
 
     document.title = site.name + ' — ' + (site.tagline || 'Togo');
@@ -560,69 +520,42 @@
      INTERACTIONS & ACCESSIBILITY
      ============================================================ */
   function initInteractions() {
-    /* --- Mobile Drawer & Burger Interactions --- */
-    const burger        = $('#burger');
-    const bottomMenuBtn = $('#mobile-bottom-menu-btn');
-    const drawer        = $('#mobile-drawer');
-    const closeBtn      = $('#mobile-close');
-    const overlay       = $('#overlay');
-
-    function openMenu() {
-      if (drawer) {
-        drawer.classList.add('is-open');
-        drawer.setAttribute('aria-hidden', 'false');
-      }
-      if (overlay) overlay.classList.add('is-visible');
-      if (burger) {
-        burger.classList.add('is-active');
-        burger.setAttribute('aria-expanded', 'true');
-      }
-      document.body.classList.add('no-scroll');
-    }
+    /* --- Mobile Burger Menu & Overlay --- */
+    const burger  = $('#burger');
+    const nav     = $('#nav');
+    const overlay = $('#overlay');
 
     function closeMenu() {
-      if (drawer) {
-        drawer.classList.remove('is-open');
-        drawer.setAttribute('aria-hidden', 'true');
-      }
-      if (overlay) overlay.classList.remove('is-visible');
-      if (burger) {
-        burger.classList.remove('is-active');
-        burger.setAttribute('aria-expanded', 'false');
-      }
+      burger.classList.remove('is-active');
+      nav.classList.remove('is-open');
+      overlay.classList.remove('is-visible');
+      burger.setAttribute('aria-expanded', 'false');
       document.body.classList.remove('no-scroll');
     }
 
-    if (burger) {
+    function openMenu() {
+      burger.classList.add('is-active');
+      nav.classList.add('is-open');
+      overlay.classList.add('is-visible');
+      burger.setAttribute('aria-expanded', 'true');
+      document.body.classList.add('no-scroll');
+    }
+
+    if (burger && nav && overlay) {
       burger.addEventListener('click', () => {
-        const isOpen = drawer && drawer.classList.contains('is-open');
+        const isOpen = nav.classList.contains('is-open');
         isOpen ? closeMenu() : openMenu();
       });
-    }
 
-    if (bottomMenuBtn) {
-      bottomMenuBtn.addEventListener('click', openMenu);
-    }
-
-    if (closeBtn) {
-      closeBtn.addEventListener('click', closeMenu);
-    }
-
-    if (overlay) {
       overlay.addEventListener('click', closeMenu);
-    }
 
-    document.addEventListener('keydown', e => {
-      if (e.key === 'Escape' && drawer && drawer.classList.contains('is-open')) {
-        closeMenu();
-      }
-    });
-
-    // Close drawer when clicking any link inside it
-    if (drawer) {
-      $$('.mobile-drawer__btn, .mobile-drawer__foot a', drawer).forEach(a => {
-        a.addEventListener('click', closeMenu);
+      document.addEventListener('keydown', e => {
+        if (e.key === 'Escape' && nav.classList.contains('is-open')) {
+          closeMenu();
+        }
       });
+
+      $$('.nav-btn', nav).forEach(a => a.addEventListener('click', closeMenu));
     }
 
     /* --- Header shadow on scroll & Back-to-top button --- */
@@ -653,44 +586,23 @@
       });
     }
 
-    /* --- Active Navigation link on scroll (Desktop, Drawer & Mobile Bottom Bar) --- */
-    const navLinks       = $$('.nav-btn');
-    const bottomNavItems = $$('.mobile-bottom-bar__item[data-section]');
-    const drawerLinks    = $$('.mobile-drawer__btn');
-    const sections       = $$('section[id], header[id]');
+    /* --- Active Navigation link on scroll --- */
+    const navLinks = $$('.nav-btn');
+    const sections = $$('section[id], header[id]');
 
     function highlightNav() {
-      const scrollY = window.scrollY + 130;
+      const scrollY = window.scrollY + 120;
       sections.forEach(sec => {
         const top = sec.offsetTop;
         const height = sec.offsetHeight;
         const id = sec.getAttribute('id');
         if (scrollY >= top && scrollY < top + height) {
-          // Desktop buttons
           navLinks.forEach(link => {
             const href = link.getAttribute('href');
             if (href === '#' + id) {
               link.classList.add('is-active');
             } else if (!link.classList.contains('nav-btn--donate')) {
               link.classList.remove('is-active');
-            }
-          });
-          // Mobile bottom bar items
-          bottomNavItems.forEach(item => {
-            const section = item.dataset.section;
-            if (section === id) {
-              item.classList.add('is-active');
-            } else {
-              item.classList.remove('is-active');
-            }
-          });
-          // Drawer items
-          drawerLinks.forEach(item => {
-            const href = item.getAttribute('href');
-            if (href === '#' + id) {
-              item.classList.add('is-active');
-            } else if (!item.classList.contains('mobile-drawer__btn--donate')) {
-              item.classList.remove('is-active');
             }
           });
         }

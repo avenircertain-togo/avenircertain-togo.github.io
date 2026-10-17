@@ -99,12 +99,12 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 /* ---------- Mobile Overlay ---------- */
 .overlay {
-  position: fixed; inset: 0; z-index: 998;
+  position: fixed; inset: 0; z-index: 98;
   background: rgba(20,27,45,.65);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   opacity: 0; visibility: hidden;
-  transition: opacity var(--transition), visibility var(--transition);
+  transition: var(--transition);
 }
 .overlay.is-visible { opacity: 1; visibility: visible; }
 
@@ -169,26 +169,24 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   height: 100%;
   display: flex; align-items: center; justify-content: space-between;
   padding: 0 var(--space-md);
-  gap: var(--space-sm);
+  gap: var(--space-md);
 }
 
-/* Logo agrandi et mis en valeur (Responsive) */
+/* Logo agrandi et mis en valeur */
 .header__logo {
-  display: flex; align-items: center; gap: 10px;
+  display: flex; align-items: center; gap: var(--space-sm);
   z-index: 101;
   text-decoration: none;
-  min-width: 0;
-  flex: 1 1 auto;
+  flex-shrink: 0;
 }
 .header__logo-frame {
-  width: 56px; height: 56px;
-  border-radius: 13px;
+  width: 64px; height: 64px;
+  border-radius: 14px;
   padding: 3px;
   background: linear-gradient(135deg, var(--c-accent), var(--c-primary));
   box-shadow: 0 4px 16px rgba(200,168,78,.25), 0 2px 6px rgba(20,27,45,.12);
   display: flex; align-items: center; justify-content: center;
   transition: transform var(--transition-bounce), box-shadow var(--transition);
-  flex-shrink: 0;
 }
 .header__logo:hover .header__logo-frame {
   transform: scale(1.05) rotate(-1deg);
@@ -197,24 +195,20 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .header__logo img {
   width: 100%; height: 100%;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 11px;
   background: var(--c-white);
 }
 
 .header__brand {
   display: flex; flex-direction: column;
-  min-width: 0;
 }
 .header__brand-full {
   font-family: var(--ff-heading);
-  font-size: 1.08rem;
-  line-height: 1.2;
+  font-size: 1.15rem;
+  line-height: 1.25;
   color: var(--c-dark);
   font-weight: 700;
   letter-spacing: -.01em;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 .header__brand-acronym {
   font-size: var(--fs-xs);
@@ -234,94 +228,38 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   font-size: 0.72rem;
 }
 
-/* ---------- Contrôles du Header (Mobile & Tablette) ---------- */
-.header__controls {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex-shrink: 0;
-}
-.header__mobile-donate {
-  display: none;
-  padding: 0.45rem 0.95rem;
-  font-size: 0.8rem;
-  font-weight: 800;
-  border-radius: var(--radius-full);
-  gap: 6px;
-}
-
-/* Burger Button interactif et ultra visible */
-.header__burger {
-  display: none;
-  align-items: center;
-  gap: 7px;
-  background: var(--c-white);
-  border: 1px solid rgba(20,27,45,.14);
-  border-radius: var(--radius-full);
-  padding: 7px 12px;
-  cursor: pointer;
-  box-shadow: 0 2px 8px rgba(20,27,45,.06);
-  transition: all var(--transition);
-  flex-shrink: 0;
-}
-.header__burger:hover,
-.header__burger:focus {
-  background: var(--c-light);
-  border-color: var(--c-primary);
-  transform: translateY(-1px);
-}
-.header__burger-lines {
-  display: flex; flex-direction: column; gap: 4px;
-  width: 17px;
-}
-.header__burger-lines span {
-  display: block; width: 100%; height: 2.2px;
-  background: var(--c-dark);
-  border-radius: 2px;
-  transition: transform var(--transition), opacity var(--transition);
-}
-.header__burger.is-active .header__burger-lines span:nth-child(1) {
-  transform: translateY(6.2px) rotate(45deg);
-}
-.header__burger.is-active .header__burger-lines span:nth-child(2) {
-  opacity: 0;
-}
-.header__burger.is-active .header__burger-lines span:nth-child(3) {
-  transform: translateY(-6.2px) rotate(-45deg);
-}
-.header__burger-label {
-  font-size: 0.76rem;
-  font-weight: 700;
-  color: var(--c-dark);
-  letter-spacing: .02em;
-  text-transform: uppercase;
-}
-
-/* ---------- Navigation Desktop en boutons / onglets ---------- */
+/* ---------- Navigation en boutons / onglets ---------- */
 .header__nav {
-  display: flex;
-  align-items: center;
+  position: fixed; top: 0; right: 0;
+  width: min(340px, 88vw); height: 100vh;
+  background: var(--c-white);
+  box-shadow: var(--shadow-xl);
+  transform: translateX(100%);
+  transition: transform var(--transition);
+  z-index: 99;
+  overflow-y: auto;
+  padding: calc(var(--header-h) + var(--topbar-h) + var(--space-md)) var(--space-md) var(--space-xl);
 }
+.header__nav.is-open { transform: translateX(0); }
 .header__nav-list {
-  display: flex;
-  align-items: center;
+  display: flex; flex-direction: column;
   list-style: none;
-  gap: 4px;
+  gap: var(--space-xs);
   padding: 0;
-  margin: 0;
 }
 
-/* Style des boutons onglets */
+/* Style des liens onglets / boutons */
 .nav-btn {
-  display: inline-flex; align-items: center;
-  padding: 0.5rem 0.85rem;
-  font-size: 0.88rem;
+  display: flex; align-items: center;
+  padding: 0.7rem 1.2rem;
+  font-size: var(--fs-base);
   font-weight: 600;
   color: var(--c-dark);
   border-radius: var(--radius-full);
   transition: all var(--transition);
   background: transparent;
   white-space: nowrap;
+  width: 100%;
 }
 .nav-btn:hover {
   background: rgba(27,107,147,.08);
@@ -335,13 +273,13 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 /* Bouton DONATION en exergue spectaculaire */
 .header__nav-item--cta {
-  margin-left: 6px;
+  margin-left: var(--space-xs);
 }
 .nav-btn--donate {
   background: linear-gradient(135deg, #E5B942, #C8A84E, #b59235);
   color: #141B2D !important;
   font-weight: 800;
-  padding: 0.55rem 1.15rem;
+  padding: 0.7rem 1.4rem;
   border-radius: var(--radius-full);
   box-shadow: 0 4px 18px rgba(200,168,78,.45), 0 0 0 1px rgba(255,255,255,.5) inset;
   display: inline-flex; align-items: center; gap: 8px;
@@ -371,220 +309,23 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   70% { transform: scale(1); }
 }
 
-/* ============================================================
-   MOBILE DRAWER (MENU COMPLET SLIDE-IN POUR MOBILE & TABLETTE)
-   ============================================================ */
-.mobile-drawer {
-  position: fixed;
-  top: 0; right: 0;
-  width: min(360px, 86vw);
-  height: 100vh;
-  height: 100dvh;
-  background: #FFFFFF;
-  z-index: 1000;
-  display: flex;
-  flex-direction: column;
-  box-shadow: -8px 0 32px rgba(20,27,45,.25);
-  transform: translateX(105%);
-  transition: transform 0.35s cubic-bezier(.22, 1, .36, 1);
-  visibility: hidden;
+/* Burger */
+.header__burger {
+  display: flex; flex-direction: column; gap: 5px;
+  width: 32px;
+  z-index: 101;
+  padding: 6px 0;
 }
-.mobile-drawer.is-open {
-  transform: translateX(0);
-  visibility: visible;
+.header__burger span {
+  display: block; width: 100%; height: 2.8px;
+  background: var(--c-dark);
+  border-radius: 3px;
+  transition: var(--transition);
+  transform-origin: center;
 }
-.mobile-drawer__head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1.1rem 1.3rem;
-  border-bottom: 1px solid rgba(20,27,45,.08);
-  background: var(--c-light);
-}
-.mobile-drawer__brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.mobile-drawer__logo-frame {
-  width: 44px; height: 44px;
-  border-radius: 11px;
-  overflow: hidden;
-  border: 2px solid var(--c-accent);
-  box-shadow: 0 2px 8px rgba(20,27,45,.1);
-}
-.mobile-drawer__logo-frame img {
-  width: 100%; height: 100%; object-fit: cover;
-}
-.mobile-drawer__title {
-  display: block;
-  font-family: var(--ff-heading);
-  font-size: 1.05rem;
-  color: var(--c-dark);
-  line-height: 1.2;
-}
-.mobile-drawer__subtitle {
-  display: block;
-  font-size: 0.72rem;
-  color: var(--c-gray-600);
-}
-.mobile-drawer__close {
-  width: 36px; height: 36px;
-  border-radius: 50%;
-  border: 1px solid rgba(20,27,45,.12);
-  background: var(--c-white);
-  color: var(--c-dark);
-  font-size: 1.4rem;
-  line-height: 1;
-  display: flex; align-items: center; justify-content: center;
-  cursor: pointer;
-  transition: all var(--transition);
-}
-.mobile-drawer__close:hover {
-  background: rgba(20,27,45,.06);
-  transform: scale(1.08);
-}
-.mobile-drawer__body {
-  flex: 1;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  padding: 1.2rem 1.3rem;
-}
-.mobile-drawer__heading {
-  display: block;
-  font-size: 0.72rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: .1em;
-  color: var(--c-gray-600);
-  margin-bottom: 0.85rem;
-}
-.mobile-drawer__list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.mobile-drawer__btn {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 0.78rem 1rem;
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--c-dark);
-  background: var(--c-light);
-  border-radius: 12px;
-  text-decoration: none;
-  transition: all var(--transition);
-  border: 1px solid rgba(20,27,45,.05);
-}
-.mobile-drawer__btn:hover,
-.mobile-drawer__btn:active,
-.mobile-drawer__btn.is-active {
-  background: rgba(27,107,147,.1);
-  color: var(--c-primary);
-  border-color: rgba(27,107,147,.25);
-  transform: translateX(3px);
-}
-.mobile-drawer__icon {
-  font-size: 1.15rem;
-  line-height: 1;
-}
-.mobile-drawer__btn--donate {
-  background: linear-gradient(135deg, #E5B942, #C8A84E, #b59235) !important;
-  color: #141B2D !important;
-  font-weight: 800;
-  border: 1px solid rgba(255,255,255,.5);
-  box-shadow: 0 4px 14px rgba(200,168,78,.4);
-  margin-top: 4px;
-}
-.mobile-drawer__verse {
-  margin-top: 1.5rem;
-  padding: 12px;
-  background: rgba(200,168,78,.1);
-  border-left: 3px solid var(--c-accent);
-  border-radius: 6px;
-  font-size: 0.8rem;
-  color: var(--c-dark);
-  font-style: italic;
-  line-height: 1.45;
-}
-.mobile-drawer__verse small {
-  display: block;
-  margin-top: 4px;
-  font-style: normal;
-  font-weight: 700;
-  color: var(--c-primary);
-}
-.mobile-drawer__foot {
-  padding: 1rem 1.3rem;
-  border-top: 1px solid rgba(20,27,45,.08);
-  background: var(--c-light);
-}
-
-/* ============================================================
-   BARRE DE NAVIGATION MOBILE RAPIDE (DOCK FIXE EN BAS)
-   ============================================================ */
-.mobile-bottom-bar {
-  position: fixed;
-  bottom: 0; left: 0; right: 0;
-  height: 62px;
-  background: rgba(255, 255, 255, 0.96);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-top: 1px solid rgba(20,27,45,.08);
-  box-shadow: 0 -4px 20px rgba(20,27,45,.08);
-  display: none;
-  align-items: center;
-  justify-content: space-around;
-  padding: 0 4px;
-  padding-bottom: env(safe-area-inset-bottom, 0px);
-  z-index: 95;
-}
-.mobile-bottom-bar__item {
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  flex: 1;
-  height: 100%;
-  color: var(--c-gray-600);
-  text-decoration: none;
-  font-size: 0.68rem;
-  font-weight: 600;
-  gap: 2px;
-  background: none; border: none; cursor: pointer;
-  transition: color var(--transition);
-  padding: 4px 0;
-}
-.mobile-bottom-bar__item.is-active,
-.mobile-bottom-bar__item:hover {
-  color: var(--c-primary);
-}
-.mobile-bottom-bar__icon {
-  font-size: 1.15rem;
-  line-height: 1;
-}
-.mobile-bottom-bar__item--cta {
-  position: relative;
-  top: -10px;
-  flex: 0 0 62px;
-}
-.mobile-bottom-bar__cta-bubble {
-  width: 46px; height: 46px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #E5B942, #C8A84E, #b59235);
-  box-shadow: 0 4px 14px rgba(200,168,78,.55);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1.2rem;
-  border: 3px solid var(--c-white);
-  animation: pulse-glow 3s infinite;
-}
-.mobile-bottom-bar__item--cta .mobile-bottom-bar__label {
-  font-weight: 800;
-  color: var(--c-dark);
-  margin-top: 1px;
-}
+.header__burger.is-active span:nth-child(1) { transform: translateY(7.8px) rotate(45deg); }
+.header__burger.is-active span:nth-child(2) { opacity: 0; }
+.header__burger.is-active span:nth-child(3) { transform: translateY(-7.8px) rotate(-45deg); }
 
 /* ============================================================
    SECTIONS GÉNÉRALES
@@ -1793,7 +1534,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     font-size: 1.05rem;
   }
   .header__nav {
-    display: flex !important;
     position: static;
     width: auto; height: auto;
     background: none;
@@ -1819,10 +1559,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     padding: 0.52rem 1.05rem;
     font-size: 0.84rem;
   }
-  .header__burger { display: none !important; }
-  .header__mobile-donate { display: none !important; }
-  .mobile-drawer { display: none !important; }
-  .mobile-bottom-bar { display: none !important; }
+  .header__burger { display: none; }
 }
 
 /* Très grands écrans : plus de confort et espacement généreux */
@@ -1844,78 +1581,5 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .nav-btn--donate {
     padding: 0.58rem 1.2rem;
     font-size: 0.88rem;
-  }
-}
-
-/* ============================================================
-   OPTIMISATIONS MOBILES (< 900px, < 768px, < 480px, < 360px)
-   ============================================================ */
-@media (max-width: 900px) {
-  .mobile-bottom-bar {
-    display: flex;
-  }
-  body {
-    padding-bottom: 66px;
-  }
-  .back-to-top {
-    bottom: 76px;
-    right: 14px;
-    width: 42px; height: 42px;
-  }
-}
-
-@media (max-width: 768px) {
-  :root {
-    --header-h: 76px;
-    --topbar-h: 34px;
-  }
-  .hero__image-wrap {
-    height: clamp(260px, 42vh, 340px);
-  }
-}
-
-@media (max-width: 480px) {
-  :root {
-    --header-h: 70px;
-    --topbar-h: 30px;
-  }
-  .header__inner {
-    padding: 0 10px;
-    gap: 6px;
-  }
-  .header__logo-frame {
-    width: 44px; height: 44px;
-    border-radius: 10px;
-  }
-  .header__brand-full {
-    font-size: 0.92rem;
-    max-width: 175px;
-  }
-  .header__burger-label {
-    display: none;
-  }
-  .header__burger {
-    padding: 8px 10px;
-  }
-  .header__mobile-donate {
-    padding: 0.42rem 0.65rem;
-    font-size: 0.76rem;
-  }
-  .hero__actions .btn {
-    width: 100%;
-    justify-content: center;
-  }
-}
-
-@media (max-width: 360px) {
-  .header__brand-full {
-    font-size: 0.84rem;
-    max-width: 130px;
-  }
-  .header__mobile-donate-text {
-    display: none;
-  }
-  .header__logo-frame {
-    width: 40px; height: 40px;
   }
 }

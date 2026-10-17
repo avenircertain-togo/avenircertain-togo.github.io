@@ -34,43 +34,6 @@
   <!-- ===== MOBILE OVERLAY ===== -->
   <div class="overlay" id="overlay"></div>
 
-  <!-- ===== MOBILE DRAWER (Menu complet tous écrans mobiles & tablettes) ===== -->
-  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Menu de navigation mobile" aria-hidden="true">
-    <div class="mobile-drawer__head">
-      <div class="mobile-drawer__brand">
-        <div class="mobile-drawer__logo-frame">
-          <img src="assets/logo.jpg" alt="Logo EPAC" width="44" height="44">
-        </div>
-        <div>
-          <strong class="mobile-drawer__title">EPAC Togo</strong>
-          <small class="mobile-drawer__subtitle">Ensemble Pour un Avenir Certain</small>
-        </div>
-      </div>
-      <button class="mobile-drawer__close" id="mobile-close" aria-label="Fermer le menu">&times;</button>
-    </div>
-
-    <div class="mobile-drawer__body">
-      <span class="mobile-drawer__heading">Navigation principale</span>
-      <nav class="mobile-drawer__nav" aria-label="Liens mobiles">
-        <ul class="mobile-drawer__list" id="mobile-nav-list">
-          <!-- Rempli dynamiquement par JS avec tous les 8 boutons -->
-        </ul>
-      </nav>
-
-      <div class="mobile-drawer__verse">
-        « Laissez les petits enfants venir à moi… car le Royaume de Dieu est pour ceux qui leur ressemblent. »
-        <small>— Marc 10:14</small>
-      </div>
-    </div>
-
-    <div class="mobile-drawer__foot">
-      <a href="#donation" class="btn btn--donate btn--full">
-        <span class="btn__heart">💛</span>
-        <span>Faire un don d'espérance</span>
-      </a>
-    </div>
-  </aside>
-
   <!-- ===== TOP ANNOUNCEMENT BAR ===== -->
   <aside class="topbar">
     <div class="topbar__inner">
@@ -93,26 +56,16 @@
         </div>
       </a>
 
-      <!-- Navigation sous forme d'onglets et de boutons (Desktop >= 1160px) -->
+      <!-- Navigation sous forme d'onglets et de boutons -->
       <nav class="header__nav" id="nav" aria-label="Navigation principale">
         <ul class="header__nav-list" id="nav-list">
           <!-- Rempli dynamiquement par JS -->
         </ul>
       </nav>
 
-      <!-- Contrôles mobiles & tablettes (< 1160px) -->
-      <div class="header__controls">
-        <a href="#donation" class="btn btn--donate header__mobile-donate" aria-label="Faire un don">
-          <span class="btn__heart">💛</span>
-          <span class="header__mobile-donate-text">Donner</span>
-        </a>
-        <button class="header__burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false">
-          <span class="header__burger-lines" aria-hidden="true">
-            <span></span><span></span><span></span>
-          </span>
-          <span class="header__burger-label">Menu</span>
-        </button>
-      </div>
+      <button class="header__burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
@@ -358,32 +311,6 @@
       <p id="footer-copy" class="footer__copy"></p>
     </div>
   </footer>
-
-  <!-- ===== BARRE DE NAVIGATION MOBILE RAPIDE (DOCK FIXE EN BAS) ===== -->
-  <nav class="mobile-bottom-bar" id="mobile-bottom-bar" aria-label="Navigation rapide">
-    <a href="#accueil" class="mobile-bottom-bar__item is-active" data-section="accueil">
-      <span class="mobile-bottom-bar__icon">🏠</span>
-      <span class="mobile-bottom-bar__label">Accueil</span>
-    </a>
-    <a href="#mission" class="mobile-bottom-bar__item" data-section="mission">
-      <span class="mobile-bottom-bar__icon">🎯</span>
-      <span class="mobile-bottom-bar__label">Mission</span>
-    </a>
-    <a href="#donation" class="mobile-bottom-bar__item mobile-bottom-bar__item--cta" data-section="donation">
-      <div class="mobile-bottom-bar__cta-bubble">
-        <span class="nav-btn__heart">💛</span>
-      </div>
-      <span class="mobile-bottom-bar__label">Don</span>
-    </a>
-    <a href="#projets" class="mobile-bottom-bar__item" data-section="projets">
-      <span class="mobile-bottom-bar__icon">🏗️</span>
-      <span class="mobile-bottom-bar__label">Projets</span>
-    </a>
-    <button type="button" class="mobile-bottom-bar__item" id="mobile-bottom-menu-btn" aria-label="Tous les boutons du menu">
-      <span class="mobile-bottom-bar__icon">☰</span>
-      <span class="mobile-bottom-bar__label">Menu</span>
-    </button>
-  </nav>
 
   <!-- ===== BACK TO TOP ===== -->
   <button class="back-to-top" id="back-to-top" aria-label="Retour en haut">
