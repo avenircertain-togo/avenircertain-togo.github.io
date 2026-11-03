@@ -1,5 +1,5 @@
 /* ============================================================
-   EPAC — Ensemble Pour un Avenir Certain (Togo)
+   EAC — Ensemble pour un Avenir Certain (Togo)
    style.css  ·  Mobile-first  ·  Pure CSS  ·  No framework
    v3.0 — High-end Convergent Design, Prominent Logo & Navigation
    ============================================================ */
@@ -1227,7 +1227,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .media-card__play:hover .media-card__play-circle { transform: scale(1.1); }
 .media-card__play-circle svg { width: 22px; height: 22px; fill: currentColor; }
-.media-card__iframe { width: 100%; height: 100%; border: none; }
+.media-card__iframe, .media-card__video-player { width: 100%; height: 100%; border: none; object-fit: cover; }
 .media-card__title {
   padding: var(--space-sm);
   font-size: var(--fs-sm);

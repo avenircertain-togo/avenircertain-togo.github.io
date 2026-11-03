@@ -1,6 +1,6 @@
 # ============================================================
 #  Sveltia CMS — config.yml
-#  Administration du site "Ensemble Pour un Avenir Certain (EPAC)"
+#  Administration du site "Ensemble pour un Avenir Certain (EAC)"
 # ============================================================
 
 backend:
@@ -85,13 +85,13 @@ collections:
               - { label: "Libellé",            name: label,  widget: string }
 
           # ---------- mission ----------
-          - label: "✝️ Section Mission & Coopération"
+          - label: "🎯 Section Mission & Valeurs"
             name: mission
             widget: object
             collapsed: true
             fields:
               - { label: "Titre de section",   name: title, widget: string }
-              - { label: "Verset biblique",    name: verse, widget: text }
+              - { label: "Citation / Devise",    name: verse, widget: text }
               - label: "Piliers d'action"
                 name: blocks
                 widget: list
@@ -161,7 +161,7 @@ collections:
             fields:
               - { label: "Titre",          name: title,    widget: string }
               - { label: "Sous-titre",     name: subtitle, widget: string }
-              - { label: "Verset biblique", name: verse,    widget: text }
+              - { label: "Citation inspirante", name: verse,    widget: text }
               - label: "Paliers de dons"
                 name: tiers
                 widget: list
@@ -203,7 +203,7 @@ collections:
                   - { label: "Lien externe (optionnel)", name: link,  widget: string, required: false, default: "#" }
 
           # ---------- blog ----------
-          - label: "✍️ Section Blog (Foi & Espérance)"
+          - label: "✍️ Section Blog (Actualités & Témoignages)"
             name: blog
             widget: object
             collapsed: true
@@ -309,4 +309,4 @@ collections:
             collapsed: true
             fields:
               - { label: "Texte de copyright", name: copyright, widget: string }
-              - { label: "Verset biblique",    name: verse,     widget: text }
+              - { label: "Citation finale",    name: verse,     widget: text }

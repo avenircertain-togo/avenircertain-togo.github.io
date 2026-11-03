@@ -1,345 +1,395 @@
 {
   "site": {
-    "name": "Ensemble Pour un Avenir Certain (EPAC)",
-    "shortName": "EPAC Togo",
-    "tagline": "Association chrétienne au Togo œuvrant pour l'épanouissement et l'avenir des enfants défavorisés",
+    "name": "Ensemble pour un Avenir Certain (EAC)",
+    "shortName": "EAC Togo",
+    "tagline": "Association à but non lucratif au Togo œuvrant pour l'épanouissement et l'avenir des enfants vulnérables",
     "logo": "assets/logo.jpg",
     "nav": [
-      { "label": "Accueil",     "href": "#accueil" },
-      { "label": "Mission",     "href": "#mission" },
-      { "label": "Programmes",  "href": "#programmes" },
-      { "label": "Projets",     "href": "#projets" },
-      { "label": "Actualités",  "href": "#articles" },
-      { "label": "Blog",        "href": "#blog" },
-      { "label": "Donation",    "href": "#donation", "isCta": true },
-      { "label": "Contact",     "href": "#contact" }
+      {
+        "label": "Accueil",
+        "href": "#accueil"
+      },
+      {
+        "label": "Mission",
+        "href": "#mission"
+      },
+      {
+        "label": "Programmes",
+        "href": "#programmes"
+      },
+      {
+        "label": "Projets",
+        "href": "#projets"
+      },
+      {
+        "label": "Actualités",
+        "href": "#articles"
+      },
+      {
+        "label": "Blog",
+        "href": "#blog"
+      },
+      {
+        "label": "Donation",
+        "href": "#donation",
+        "isCta": true
+      },
+      {
+        "label": "Contact",
+        "href": "#contact"
+      }
     ]
   },
-
   "hero": {
-    "headline": "Chaque enfant togolais porte en lui la promesse d'un avenir radieux",
-    "subheadline": "Bâtissons ensemble des ponts d'espérance, de dignité et d'excellence pour les enfants vulnérables au Togo — par une éducation de qualité, la santé communautaire et l'amour fraternel en Christ.",
-    "cta":          { "text": "Faire un don d'amour", "href": "#donation" },
-    "ctaSecondary": { "text": "Découvrir notre mission", "href": "#mission" },
-    "image": "images/uploads/close-up-little-girl-portrait-outdoors.jpg",
-    "imageAlt": "Petite fille togolaise rayonnante d'espérance et de confiance"
+    "headline": "Chaque enfant togolais porte en lui la promesse d'un avenir certain",
+    "subheadline": "Ensemble pour un Avenir Certain (EAC) contribue, par des actions concrètes et solidaires, à l'amélioration des conditions de vie et d'épanouissement des enfants en situation de vulnérabilité au Togo — par l'éducation, le soutien alimentaire et l'inclusion.",
+    "cta": {
+      "text": "Faire un don solidaire",
+      "href": "#donation"
+    },
+    "ctaSecondary": {
+      "text": "Découvrir notre mission",
+      "href": "#mission"
+    },
+    "image": "images/uploads/mere-enfant-sac-eac.jpg",
+    "imageAlt": "Bénévole EAC remettant un kit scolaire à un enfant lors d'une distribution solidaire"
   },
-
   "stats": [
-    { "value": 450,  "suffix": "+", "label": "Enfants parrainés et scolarisés" },
-    { "value": 18,   "suffix": "",  "label": "Écoles et villages partenaires" },
-    { "value": 10,   "suffix": " ans", "label": "D'engagement chrétien continu" },
-    { "value": 98,   "suffix": "%", "label": "Taux de réussite aux examens" }
+    {
+      "value": 100,
+      "suffix": "+",
+      "label": "Kits scolaires distribués"
+    },
+    {
+      "value": 9,
+      "suffix": "",
+      "label": "Membres actifs et bénévoles"
+    },
+    {
+      "value": 1,
+      "suffix": " an",
+      "label": "D'engagement solidaire continu"
+    },
+    {
+      "value": 50,
+      "suffix": "+",
+      "label": "Enfants handicapés soutenus (Noël 2026)"
+    }
   ],
-
   "mission": {
     "title": "Notre Mission & Nos Valeurs",
-    "verse": "« Laissez les petits enfants venir à moi, et ne les empêchez pas, car le Royaume de Dieu est pour ceux qui leur ressemblent. » — Marc 10:14",
+    "verse": "« Les conditions de vie d'un enfant ne devraient pas déterminer définitivement ses possibilités d'avenir. » — EAC Togo",
     "blocks": [
       {
-        "title": "Éducation d'excellence & Dignité",
-        "text": "Nous croyons que l'éducation est le levier le plus puissant pour briser le cycle de la pauvreté. À Lomé, dans les Plateaux et la région Maritime, nous prenons intégralement en charge les frais de scolarité, les uniformes neufs, les manuels et les fournitures pour des centaines d'enfants. Des professeurs et tuteurs bénévoles assurent des séances de soutien personnalisé pour cultiver la confiance, la créativité et le goût de la réussite chez chaque élève.",
+        "title": "Soutien à la scolarisation & Dignité",
+        "text": "Nous croyons que l'éducation est le levier le plus puissant pour briser le cycle de la pauvreté. À Lomé et dans le canton de Baguida, nous distribuons des kits scolaires complets, du matériel pédagogique et apportons un soutien ponctuel aux enfants particulièrement vulnérables issus de familles modestes. Notre première opération a permis de distribuer 100 kits scolaires à 100 enfants en août 2026.",
         "image": "images/uploads/medium-shot-kid-writing-board.jpg",
         "imageAlt": "Élève africain participant activement au tableau noir en classe"
       },
       {
-        "title": "Santé, Nutrition & Bien-être intégral",
-        "text": "Grandir en pleine santé est un droit fondamental. Grâce à nos cantines scolaires solidaires, plus de 350 repas chauds et nutritifs, préparés avec des denrées achetées directement aux cultivatrices locales, sont servis chaque jour d'école. Nous organisons également des bilans pédiatriques réguliers, des campagnes de déparasitage, de soins bucco-dentaires et de vaccination pour garantir à chaque enfant la vitalité nécessaire à son plein épanouissement.",
-        "image": "images/uploads/young-african-sisters.jpg",
-        "imageAlt": "Jeunes sœurs africaines unies et rayonnantes de santé"
+        "title": "Soutien alimentaire & Bien-être intégral",
+        "text": "Grandir en pleine santé est un droit fondamental. L'association souhaite contribuer ponctuellement à l'amélioration des conditions alimentaires des enfants et familles particulièrement vulnérables, notamment à travers des distributions ciblées de produits de première nécessité. Le projet « Noël Solidaire 2026 » prévoit la distribution de kits alimentaires à 50 enfants en situation de handicap.",
+        "image": "images/uploads/distribution-kits-scolaires.jpg",
+        "imageAlt": "Bénévole EAC préparant la distribution de kits aux familles"
       },
       {
-        "title": "Coopération internationale & Fraternité chrétienne",
-        "text": "Notre action est portée par une belle alliance de solidarité : des équipes togolaises investies sur le terrain, main dans la main avec des bénévoles, donateurs et partenaires européens qui partagent notre foi et nos valeurs. Cette coopération interculturelle favorise l'échange de compétences, l'accueil de missions humanitaires médicales et pédagogiques, et tisse des liens fraternels durables entre les peuples autour de l'amour du prochain.",
-        "image": "images/uploads/close-up-team-hand-shake.jpg",
-        "imageAlt": "Poignée de mains solidaire scellant l'alliance entre équipes locales et partenaires"
+        "title": "Inclusion & Solidarité communautaire",
+        "text": "Notre action est portée par une belle alliance de solidarité : des membres bénévoles investis sur le terrain, main dans la main avec les communautés locales, les entreprises, les fondations et les organisations nationales et internationales partageant nos valeurs de dignité, d'équité et d'inclusion. Cette coopération favorise l'échange de compétences et tisse des liens solidaires durables.",
+        "image": "images/uploads/equipe-eac-terrain.jpg",
+        "imageAlt": "Équipe EAC réunie sur le terrain portant les t-shirts de l'association"
       }
     ]
   },
-
   "programmes": {
     "title": "Nos Programmes d'Action",
-    "subtitle": "Une approche holistique pour l'épanouissement de l'enfant et de sa communauté",
+    "subtitle": "Une approche solidaire pour l'épanouissement de l'enfant et de sa communauté",
     "items": [
       {
-        "title": "Parrainage scolaire individuel",
-        "text": "Lier un bienfaiteur à un enfant togolais pour garantir son parcours scolaire complet du primaire aux études supérieures, avec un suivi pédagogique rigoureux et des échanges de nouvelles réguliers.",
+        "title": "Distribution de kits scolaires",
+        "text": "Réduire les obstacles matériels auxquels sont confrontés les enfants issus de familles modestes en distribuant des kits scolaires complets, du matériel pédagogique et des fournitures essentielles.",
         "icon": "🎓",
         "size": "large"
       },
       {
-        "title": "Cantines scolaires solidaires",
-        "text": "Un déjeuner équilibré quotidien qui élimine la faim en classe et stimule l'économie locale par l'achat de vivres auprès des coopératives agricoles régionales.",
+        "title": "Soutien alimentaire solidaire",
+        "text": "Contribuer ponctuellement à l'amélioration des conditions alimentaires des enfants et familles vulnérables, à travers des distributions ciblées de produits de première nécessité.",
         "icon": "🍲",
         "size": "small"
       },
       {
-        "title": "Camps de vacances & Éveil spirituel",
-        "text": "Des colonies bibliques enrichissantes combinant jeux, ateliers manuels, louange et apprentissage des valeurs universelles de paix, d'honnêteté et d'amour chrétien.",
-        "icon": "⛺",
+        "title": "Inclusion des enfants handicapés",
+        "text": "Développer des actions en faveur des enfants en situation de handicap dans les domaines du soutien social, de l'inclusion, de l'éducation et de l'accès aux besoins essentiels.",
+        "icon": "♿",
         "size": "small"
       },
       {
-        "title": "Centre d'apprentissage professionnel",
-        "text": "Filières en couture, menuiserie, agro-écologie et outils numériques offrant aux jeunes déscolarisés des compétences pratiques pour s'insérer avec fierté dans le tissu économique.",
-        "icon": "🛠️",
+        "title": "Protection & Bien-être de l'enfant",
+        "text": "Promouvoir un environnement dans lequel les enfants sont protégés contre les différentes formes de violence, de discrimination, d'exploitation et de négligence.",
+        "icon": "🛡️",
         "size": "medium"
       },
       {
-        "title": "Points d'eau potable villageois",
-        "text": "Forages modernes équipés de pompes solaires et formation de comités locaux de gestion pour préserver la santé des familles contre les maladies hydriques.",
-        "icon": "💧",
+        "title": "Sensibilisation communautaire",
+        "text": "Mener et soutenir des actions de sensibilisation destinées aux communautés, aux familles et aux différents acteurs concernés par la protection et le bien-être des enfants.",
+        "icon": "📢",
         "size": "medium"
       },
       {
-        "title": "Micro-crédits & Autonomie des mères",
-        "text": "Autonomisation économique des mamans par des formations en gestion d'activités génératrices de revenus et l'octroi de fonds d'amorçage solidaires.",
+        "title": "Partenariats & Autonomisation",
+        "text": "Développer des partenariats fondés sur la confiance, la transparence et la complémentarité avec des ONG, fondations, entreprises et institutions pour un impact durable.",
         "icon": "🤝",
         "size": "small"
       }
     ]
   },
-
   "projets": {
-    "title": "Nos Projets Phares 2026-2027",
-    "subtitle": "Des réalisations d'envergure nécessitant la mobilisation de tous nos partenaires",
+    "title": "Nos Projets 2026-2027",
+    "subtitle": "Des réalisations concrètes nécessitant la mobilisation de tous nos partenaires",
     "items": [
       {
-        "title": "Construction de la Maison de l'Espérance à Kpalimé",
-        "category": "Infrastructures",
-        "status": "En cours de financement",
-        "progress": 65,
-        "target": "25 000 € / 16 400 000 FCFA",
-        "raised": "16 250 € collectés",
-        "image": "images/uploads/construction-maison-esperance.jpg",
-        "imageAlt": "Chantier de maçonnerie et construction du centre communautaire à Kpalimé",
-        "description": "Création d'un centre polyvalent avec bibliothèque numérique, salle de tutorat, infirmerie pédiatrique et espace d'accueil pour 120 enfants chaque jour."
+        "title": "Opération « 100 Kits Scolaires » — Réalisée en août 2026",
+        "category": "Éducation",
+        "status": "Réalisé",
+        "progress": 100,
+        "target": "100 kits distribués",
+        "raised": "100 enfants bénéficiaires",
+        "image": "images/uploads/kits-scolaires-prepares.jpg",
+        "imageAlt": "Kits scolaires préparés et prêts pour la distribution aux enfants",
+        "description": "Distribution de 100 kits scolaires à des enfants issus de familles modestes. Première opération de solidarité de l'association, rendue possible grâce aux cotisations des membres et à l'appui d'un donateur."
       },
       {
-        "title": "Forage d'eau potable solaire & maraîchage scolaire à Tsévié",
-        "category": "Eau & Écologie",
-        "status": "Démarrage imminent",
-        "progress": 80,
-        "target": "8 500 € / 5 600 000 FCFA",
-        "raised": "6 800 € collectés",
-        "image": "images/uploads/hero-enfants.jpg",
-        "imageAlt": "Enfants du village joyeux bénéficiant d'un nouveau point d'eau",
-        "description": "Installation d'un château d'eau solaire alimentant l'école primaire et un potager pédagogique maraîcher pour approvisionner la cantine en légumes frais."
-      },
-      {
-        "title": "Équipement informatique et solaire pour 3 collèges ruraux",
-        "category": "Numérique & Énergie",
-        "status": "Recherche de partenaires",
+        "title": "Noël Solidaire 2026 — Enfants en situation de handicap",
+        "category": "Inclusion & Handicap",
+        "status": "En préparation",
         "progress": 40,
-        "target": "12 000 € / 7 900 000 FCFA",
-        "raised": "4 800 € collectés",
-        "image": "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=700&q=80",
-        "imageAlt": "Jeunes élèves apprenant sur ordinateur",
-        "description": "Fourniture de 45 ordinateurs portables reconditionnés et panneaux photovoltaïques pour initier les collégiens ruraux aux nouvelles technologies."
+        "target": "50 enfants handicapés ciblés",
+        "raised": "Collecte en cours",
+        "image": "images/uploads/remise-kit-petites-filles.jpg",
+        "imageAlt": "Bénévole EAC remettant un kit à deux petites filles lors d'un événement solidaire",
+        "description": "Distribution de kits alimentaires à 50 enfants en situation de handicap issus de familles vulnérables. Une nouvelle étape dans l'engagement inclusif de l'association."
+      },
+      {
+        "title": "Extension des actions aux régions du Togo",
+        "category": "Développement territorial",
+        "status": "Planification",
+        "progress": 15,
+        "target": "Ensemble du territoire togolais",
+        "raised": "Recherche de partenaires",
+        "image": "images/uploads/enfants-assemblee-eac.jpg",
+        "imageAlt": "Enfants réunis lors d'un événement EAC à Lomé",
+        "description": "Extension progressive des activités aux différentes régions du Togo afin de répondre aux besoins d'enfants vulnérables au-delà de la région Maritime, en fonction des ressources et des partenaires locaux disponibles."
       }
     ]
   },
-
   "donation": {
     "title": "Soutenez Notre Action — Faites un Don",
     "subtitle": "Chaque don, petit ou grand, se traduit directement par un changement concret dans la vie d'un enfant au Togo",
-    "verse": "« Que chacun donne comme il l'a résolu en son cœur, sans tristesse ni contrainte ; car Dieu aime celui qui donne avec joie. » — 2 Corinthiens 9:7",
-    "image": "images/uploads/medium-shot-smiley-kid-outdoors.jpg",
-    "imageAlt": "Enfant togolais rayonnant de joie et d'espérance grâce à vos dons",
+    "verse": "« La solidarité, l'éducation, l'inclusion et l'accompagnement des enfants vulnérables constituent des leviers essentiels pour construire une société plus équitable. » — EAC",
+    "image": "images/uploads/benevole-petit-garcon.jpg",
+    "imageAlt": "Bénévole EAC avec un petit garçon souriant lors d'une distribution de kits",
     "tiers": [
       {
         "amount": "10 €",
         "fcfa": "6 500 FCFA",
-        "impact": "Un kit scolaire complet (sac, cahiers, stylos, ardoise) et une tenue d'uniforme digne pour un élève du primaire."
+        "impact": "Un kit scolaire complet (sac, cahiers, stylos, ardoise) pour un élève du primaire issu d'une famille modeste."
       },
       {
         "amount": "25 €",
         "fcfa": "16 500 FCFA",
-        "impact": "Un mois complet de déjeuners chauds à la cantine scolaire et un bilan de santé médical préventif."
+        "impact": "Un kit alimentaire de première nécessité pour un enfant en situation de handicap et sa famille."
       },
       {
         "amount": "50 €",
         "fcfa": "33 000 FCFA",
-        "impact": "Un trimestre de parrainage intégral : scolarité, fournitures, soutien scolaire hebdomadaire et suivi médical."
+        "impact": "Le soutien scolaire complet d'un enfant vulnérable : fournitures, matériel pédagogique et accompagnement."
       },
       {
         "amount": "100 €",
         "fcfa": "65 000 FCFA",
-        "impact": "Financement d'un module de formation professionnelle ou contribution majeure à un puits d'eau potable communautaire."
+        "impact": "Contribution majeure au programme d'inclusion des enfants en situation de handicap ou au développement d'un partenariat solidaire."
       }
     ],
     "methods": [
       {
         "name": "T-Money & Moov Flooz (Togo)",
         "icon": "📱",
-        "details": "Numéro officiel EPAC Togo : +228 90 12 34 56 (Préciser votre Nom en motif)"
+        "details": "Numéro officiel EAC Togo : +228 91 07 51 22 (Préciser votre Nom en motif)"
       },
       {
         "name": "Virement Bancaire (International & UEMOA)",
         "icon": "🏦",
-        "details": "Banque : Ecobank Togo / RIB disponible sur demande pour délivrance de reçu fiscal"
+        "details": "Coordonnées bancaires disponibles sur demande — contactez avenircertain2026@gmail.com"
       },
       {
-        "name": "Partenariat & Legs",
+        "name": "Partenariat & Dons en nature",
         "icon": "🤝",
-        "details": "Églises, associations, fondations et entreprises : contactez directement notre direction pour conventionner votre soutien"
+        "details": "ONG, associations, fondations et entreprises : contactez directement notre direction pour conventionner votre soutien"
       }
     ]
   },
-
   "testimonials": [
     {
-      "quote": "Grâce au parrainage d'EPAC, mes trois enfants ont pu aller à l'école sans interruption. Le soutien des tuteurs les a fait progresser de manière spectaculaire. Que le Seigneur bénisse chaque bienfaiteur !",
-      "author": "Mme Ama Koffi",
-      "role": "Mère de famille, Kpalimé"
+      "quote": "La distribution des kits scolaires par EAC a été un immense soulagement pour nos enfants et notre famille. Mes deux fils ont pu commencer l'année scolaire avec tout le nécessaire. Nous remercions profondément toute l'équipe de bénévoles.",
+      "author": "Une mère de famille",
+      "role": "Bénéficiaire, Canton de Baguida, Lomé"
     },
     {
-      "quote": "Aujourd'hui, j'ai terminé ma classe de 3ème parmi les premiers du canton. À l'école, la cantine et les livres offerts par EPAC m'ont donné l'énergie et la joie d'étudier. Mon rêve est de devenir médecin pour soigner mon village.",
-      "author": "Koffi Mensah",
-      "role": "Élève parrainé, 14 ans, Atakpamé"
+      "quote": "En tant que membre fondateur d'EAC, voir les sourires des enfants lors de la distribution des 100 kits scolaires m'a conforté dans notre mission. Chaque geste compte pour construire un avenir plus certain pour ces enfants.",
+      "author": "Membre du Comité exécutif",
+      "role": "Bénévole EAC Togo"
     },
     {
-      "quote": "Partir en mission bénévole avec EPAC au Togo a été une leçon de vie. Voir la rigueur financière, la joie rayonnante des enfants et la ferveur des équipes togolaises donne une immense confiance.",
-      "author": "Marie-Claire & Jean Dupont",
-      "role": "Partenaires et marraines en France (Lyon)"
+      "quote": "L'approche d'EAC est remarquable : transparence dans la gestion, respect de la dignité des bénéficiaires et un vrai souci d'inclusion des enfants en situation de handicap. C'est une association qui mérite d'être soutenue.",
+      "author": "Un partenaire",
+      "role": "Donateur et soutien de l'opération kits scolaires"
     },
     {
-      "quote": "L'association m'a tendu la main lorsque j'avais perdu tout espoir d'apprendre un métier. Après 2 ans au centre de formation en ébénisterie, j'ai ouvert mon atelier et je forme à mon tour deux apprentis.",
-      "author": "Yao Agbéko",
-      "role": "Ancien bénéficiaire, artisan à Lomé"
+      "quote": "Le projet Noël Solidaire pour les enfants handicapés est une initiative qui touche au cœur. Notre communauté espère que cette action sera la première d'une longue série.",
+      "author": "Un éducateur social",
+      "role": "Acteur communautaire, Lomé"
     }
   ],
-
   "articles": {
     "title": "Actualités du Terrain",
     "subtitle": "Les derniers événements et avancées vécus avec nos communautés",
     "items": [
       {
-        "title": "Rentrée scolaire 2026 : 80 nouveaux enfants accueillis avec ferveur",
-        "date": "2026-09-20",
-        "image": "images/uploads/group-african-kids-learning-together.jpg",
-        "imageAlt": "Groupe d'enfants africains apprenant ensemble avec enthousiasme",
-        "excerpt": "Une rentrée mémorable pour notre grande famille EPAC ! Grâce à la générosité renouvelée de nos parrains et donateurs, 80 jeunes enfants issus des hameaux reculés ont reçu leurs cartables garnis, uniformes et inscriptions. La joie partagée avec les familles témoigne de la force de la solidarité chrétienne.",
+        "title": "Opération « 100 Kits Scolaires » : une première réussie pour EAC",
+        "date": "2026-08-20",
+        "image": "images/uploads/enfants-reunion-eac.jpg",
+        "imageAlt": "Enfants rassemblés lors de l'événement de distribution de kits scolaires EAC",
+        "excerpt": "En août 2026, EAC a organisé sa toute première opération de solidarité : la distribution de 100 kits scolaires à 100 enfants issus de familles modestes à Lomé. Rendue possible grâce aux cotisations des 9 membres et à l'appui d'un donateur, cette action a marqué le début concret de notre engagement.",
         "link": "#"
       },
       {
-        "title": "Inauguration du nouveau forage solaire d'eau pure à Kpalimé",
-        "date": "2026-07-28",
-        "image": "images/uploads/african-woman-pouring-water-recipient-outdoors.jpg",
-        "imageAlt": "Femme africaine puisant de l'eau claire et pure au village",
-        "excerpt": "L'eau jaillit enfin au cœur du village ! Ce point d'eau sécurisé libère les mamans et les fillettes de longues corvées d'eau et élimine les risques de maladies hydriques pour plus de 600 villageois.",
+        "title": "Préparation du projet « Noël Solidaire 2026 » pour les enfants handicapés",
+        "date": "2026-10-15",
+        "image": "images/uploads/remise-kit-enfant-fille.jpg",
+        "imageAlt": "Bénévole EAC avec une jeune fille bénéficiaire lors d'un événement de l'association",
+        "excerpt": "EAC prépare activement le projet « Noël Solidaire 2026 » destiné à distribuer des kits alimentaires à 50 enfants en situation de handicap issus de familles vulnérables. L'identification des bénéficiaires et la mobilisation des ressources sont en cours.",
         "link": "#"
       },
       {
-        "title": "Grand camp biblique d'été : 160 jeunes réunis sous la tente de la joie",
-        "date": "2026-08-15",
-        "image": "images/uploads/full-shot-friends-posing-together.jpg",
-        "imageAlt": "Groupe de jeunes amis rayonnants au camp de vacances EPAC",
-        "excerpt": "Quinze jours intenses de ressourcement, de pièces de théâtre biblique, de chorale et d'initiations manuelles. Les jeunes ont fortifié leur foi et scellé de magnifiques amitiés fraternelles.",
+        "title": "EAC renforce sa gouvernance et ses procédures internes",
+        "date": "2026-09-10",
+        "image": "images/uploads/equipe-eac-terrain.jpg",
+        "imageAlt": "L'équipe EAC réunie pour une séance de planification",
+        "excerpt": "L'association consolide son organisation interne : renforcement des procédures administratives et financières, développement des capacités de gestion de projets et mise en place de mécanismes de suivi et d'évaluation des activités.",
         "link": "#"
       }
     ]
   },
-
   "blog": {
-    "title": "Le Blog d'EPAC — Foi, Espérance & Action",
-    "subtitle": "Méditations, réflexions de fond et regards d'espérance sur le développement solidaire au Togo",
+    "title": "Le Blog d'EAC — Solidarité, Dignité & Action",
+    "subtitle": "Réflexions et regards d'espérance sur le développement solidaire au Togo",
     "items": [
       {
-        "title": "Pourquoi l'amour chrétien transforme durablement l'éducation",
-        "author": "Pasteur Paul Mensah, Aumônier EPAC",
+        "title": "Pourquoi la solidarité transforme durablement l'éducation",
+        "author": "Équipe EAC Togo",
         "date": "2026-10-02",
-        "category": "Réflexion spirituelle",
-        "image": "images/uploads/alex-shute-96KCdAOLJJY-unsplash.jpg",
-        "imageAlt": "Bible ouverte et lumière d'espérance symbolisant l'amour chrétien et l'éducation",
-        "excerpt": "Éduquer un enfant ne se limite pas à lui transmettre des connaissances académiques : c'est lui révéler qu'il a une valeur inestimable aux yeux de son Créateur. Cet enracinement dans l'amour guérit les blessures du rejet et suscite des vocations d'hommes et de femmes de paix pour notre nation."
+        "category": "Réflexion",
+        "image": "images/uploads/benevole-enfant-kit.jpg",
+        "imageAlt": "Bénévole EAC remettant un sac à un enfant bénéficiaire",
+        "excerpt": "Éduquer un enfant ne se limite pas à lui transmettre des connaissances académiques : c'est lui offrir la dignité et la possibilité de construire son propre avenir. Par la distribution de kits scolaires et le soutien aux familles, nous contribuons à lever les obstacles matériels qui freinent l'accès à l'éducation."
       },
       {
-        "title": "De la charité ponctuelle à l'autonomie communautaire : notre modèle",
-        "author": "Équipe de direction EPAC Togo",
+        "title": "De l'action ponctuelle aux programmes structurés : notre vision",
+        "author": "Comité exécutif EAC",
         "date": "2026-08-25",
         "category": "Vision & Développement",
-        "image": "images/uploads/father-holding-his-little-baby-girl.jpg",
-        "imageAlt": "Père tenant tendrement sa petite fille dans un cadre familial épanoui",
-        "excerpt": "Aider sans assister, bâtir avec les communautés plutôt qu'à leur place : retour sur dix années d'expérience où chaque forage, chaque cantine et chaque atelier est co-géré par les bénéficiaires eux-mêmes pour assurer une pérennité totale."
+        "image": "images/uploads/remise-kit-enfant-adulte.jpg",
+        "imageAlt": "Membre EAC remettant un kit à un enfant accompagné d'un adulte",
+        "excerpt": "Construire avec les communautés plutôt qu'à leur place : retour sur notre première opération où chaque étape — de la mobilisation des ressources à la documentation de l'intervention — a renforcé notre capacité à servir les enfants vulnérables de manière pérenne."
       },
       {
-        "title": "Fraternité sans frontières : quand l'Europe et le Togo s'unissent",
-        "author": "Témoignage croisé",
-        "date": "2026-07-10",
-        "category": "Coopération internationale",
-        "image": "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=600&q=80",
-        "imageAlt": "Mains unies dans un projet solidaire",
-        "excerpt": "Récit d'une mission de formation pédagogique menée conjointement entre enseignants togolais et formateurs bénévoles venus de Suisse et de France. Un enrichissement mutuel où chacun donne et reçoit."
+        "title": "L'inclusion des enfants handicapés : un engagement fondamental",
+        "author": "EAC Togo",
+        "date": "2026-09-15",
+        "category": "Inclusion & Handicap",
+        "image": "images/uploads/enfants-assemblee-eac.jpg",
+        "imageAlt": "Enfants rassemblés lors d'un événement communautaire EAC",
+        "excerpt": "Les enfants en situation de handicap doivent pouvoir participer pleinement à la vie sociale et bénéficier d'un accompagnement adapté. Avec le projet Noël Solidaire, EAC franchit une étape importante dans son engagement inclusif en collaboration avec les structures spécialisées."
       }
     ]
   },
-
   "videos": {
-    "title": "Médias & Témoignages Vidéo",
-    "subtitle": "Découvrez le sourire de nos enfants et la réalité vivante de nos actions sur le terrain",
+    "title": "Médias & Vidéos du Terrain",
+    "subtitle": "Découvrez le sourire de nos enfants et la réalité vivante de nos actions sur le terrain à Lomé",
     "items": [
       {
-        "title": "Présentation officielle de l'association EPAC Togo",
-        "embedUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
-        "thumbnail": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=500&q=80"
+        "title": "Distribution des kits scolaires — Sur le terrain à Lomé",
+        "embedUrl": "assets/videos/distribution-kits-scolaires.mp4",
+        "thumbnail": "images/uploads/distribution-kits-scolaires.jpg"
       },
       {
-        "title": "Une matinée à la cantine scolaire : joie et partage",
-        "embedUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
-        "thumbnail": "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=500&q=80"
+        "title": "Moment d'échange et rassemblement avec les familles",
+        "embedUrl": "assets/videos/enfants-reunion-eac.mp4",
+        "thumbnail": "images/uploads/enfants-reunion-eac.jpg"
       },
       {
-        "title": "Témoignage de parrains et d'enfants bénéficiaires",
-        "embedUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
-        "thumbnail": "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=500&q=80"
+        "title": "Sourires et joie des enfants bénéficiaires",
+        "embedUrl": "assets/videos/joie-enfants-eac.mp4",
+        "thumbnail": "images/uploads/remise-kit-petites-filles.jpg"
       }
     ]
   },
-
   "downloads": {
     "title": "Documents & Rapports Officiels",
     "items": [
       {
-        "title": "Rapport annuel d'activités & Transparence financière",
-        "description": "Bilan moral, réalisations sur le terrain et état des comptes certifié par commissaire aux comptes.",
-        "file": "assets/documents/rapport-annuel.pdf",
+        "title": "Présentation institutionnelle EAC",
+        "description": "Document officiel présentant la vision, la mission, les valeurs et les domaines d'intervention de l'association.",
+        "file": "assets/documents/presentation-eac.pdf",
         "type": "PDF",
-        "size": "2.8 Mo"
+        "size": "105 Ko"
       },
       {
-        "title": "Dossier de Parrainage & Formulaire d'adhésion",
-        "description": "Guide pratique pour parrainer un enfant ou soutenir un projet éducatif ciblé.",
-        "file": "assets/documents/formulaire-parrainage.pdf",
+        "title": "Rapport de l'opération « 100 Kits Scolaires »",
+        "description": "Rapport de la première distribution réalisée en août 2026. Disponible sur simple demande auprès de notre secrétariat.",
+        "file": "#contact",
         "type": "PDF",
-        "size": "650 Ko"
+        "size": "Sur demande"
       },
       {
-        "title": "Statuts officiels et reconnaissance légale d'EPAC Togo",
-        "description": "Documents d'enregistrement officiel auprès des ministères de tutelle togolais.",
-        "file": "assets/documents/statuts-epac.pdf",
+        "title": "Statuts officiels et récépissé d'enregistrement",
+        "description": "Enregistrement officiel n°0034 du 14 Janvier 2026 auprès du Ministère de l'Administration Territoriale. Disponible sur simple demande.",
+        "file": "#contact",
         "type": "PDF",
-        "size": "820 Ko"
+        "size": "Sur demande"
       }
     ]
   },
-
   "contact": {
     "title": "Contactez l'Association",
-    "subtitle": "Pour toute question, demande de parrainage, partenariat ou don, notre équipe est à votre écoute.",
-    "email": "contact@avenircertain.org",
-    "phone": "+228 90 12 34 56 / +228 99 88 77 66",
-    "address": "Siège social : Quartier Bè-Klikamé, Rue de l'Espérance, BP 1234, Lomé — République Togolaise",
+    "subtitle": "Pour toute question, demande de partenariat ou don, notre équipe est à votre écoute.",
+    "email": "avenircertain2026@gmail.com",
+    "phone": "+228 91 07 51 22",
+    "address": "Siège social : Adamavo Mayakopé, Lomé — Région Maritime, Togo",
     "socials": [
-      { "platform": "Facebook",  "url": "https://facebook.com/epactogo",   "icon": "facebook" },
-      { "platform": "Instagram", "url": "https://instagram.com/epactogo",  "icon": "instagram" },
-      { "platform": "YouTube",   "url": "https://youtube.com/@epactogo",   "icon": "youtube" },
-      { "platform": "WhatsApp",  "url": "https://wa.me/22890123456",        "icon": "whatsapp" }
+      {
+        "platform": "Facebook",
+        "url": "https://facebook.com/eactogo",
+        "icon": "facebook"
+      },
+      {
+        "platform": "Instagram",
+        "url": "https://instagram.com/eactogo",
+        "icon": "instagram"
+      },
+      {
+        "platform": "YouTube",
+        "url": "https://youtube.com/@eactogo",
+        "icon": "youtube"
+      },
+      {
+        "platform": "WhatsApp",
+        "url": "https://wa.me/22891075122",
+        "icon": "whatsapp"
+      }
     ]
   },
-
   "footer": {
-    "copyright": "© 2026 Ensemble Pour un Avenir Certain (EPAC) — Tous droits réservés.",
-    "verse": "« Car je connais les projets que j'ai formés sur vous, dit l'Éternel, projets de paix et non de malheur, afin de vous donner un avenir et de l'espérance. » — Jérémie 29:11"
+    "copyright": "© 2026 Ensemble pour un Avenir Certain (EAC) — Tous droits réservés.",
+    "verse": "« La solidarité, l'éducation, l'inclusion et l'accompagnement des enfants vulnérables constituent des leviers essentiels pour construire une société plus équitable. »"
   }
 }

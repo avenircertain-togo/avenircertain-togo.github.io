@@ -1,5 +1,5 @@
 /* ============================================================
-   EPAC — script.js
+   EAC — script.js
    Loads ALL content from content/site.json, renders every section,
    and wires up modern interactions. Pure vanilla JavaScript.
    v3.0 — Enhanced with Projets, Donation, Blog & Button Navigation
@@ -48,7 +48,7 @@
       this.src = placeholderSVG(
         this.width || 600,
         this.height || 400,
-        label || 'EPAC Togo'
+        label || 'EAC Togo'
       );
       this.classList.add('img-placeholder');
     };
@@ -96,7 +96,7 @@
     if (logoImg && site.logo) {
       logoImg.src = site.logo;
       logoImg.alt = site.name;
-      withFallback(logoImg, 'EPAC');
+      withFallback(logoImg, 'EAC');
     }
 
     const headerName = $('#header-name');
@@ -132,8 +132,8 @@
       const heroImg = $('#hero-img');
       if (heroImg) {
         heroImg.src = hero.image;
-        heroImg.alt = hero.imageAlt || 'EPAC Togo';
-        withFallback(heroImg, 'Enfants du Togo — EPAC');
+        heroImg.alt = hero.imageAlt || 'EAC Togo';
+        withFallback(heroImg, 'Enfants du Togo — EAC');
       }
       if ($('#hero-headline')) $('#hero-headline').textContent = hero.headline;
       if ($('#hero-sub')) $('#hero-sub').textContent = hero.subheadline;
@@ -268,8 +268,8 @@
       const donImg = $('#don-img');
       if (donImg && donation.image) {
         donImg.src = donation.image;
-        donImg.alt = donation.imageAlt || 'Donation EPAC Togo';
-        withFallback(donImg, 'EPAC Togo — Donation');
+        donImg.alt = donation.imageAlt || 'Donation EAC Togo';
+        withFallback(donImg, 'EAC Togo — Donation');
       }
       if ($('#don-title')) $('#don-title').textContent = donation.title;
       if ($('#don-sub')) $('#don-sub').textContent = donation.subtitle;
@@ -351,7 +351,7 @@
           img.src = a.image;
           img.alt = a.imageAlt || a.title;
           img.loading = 'lazy';
-          withFallback(img, 'EPAC Actualité');
+          withFallback(img, 'EAC Actualité');
 
           div.innerHTML = `
             <div class="article-card__body">
@@ -415,7 +415,7 @@
           thumbImg.src = v.thumbnail;
           thumbImg.alt = v.title;
           thumbImg.loading = 'lazy';
-          withFallback(thumbImg, '🎬 EPAC Togo');
+          withFallback(thumbImg, '🎬 EAC Togo');
 
           div.innerHTML = `
             <div class="media-card__video">
@@ -440,9 +440,10 @@
       if (dlList && downloads.items) {
         dlList.innerHTML = '';
         downloads.items.forEach(d => {
+          const isDownload = d.file && !d.file.startsWith('#') && !d.file.startsWith('mailto:');
           const li = document.createElement('li');
           li.innerHTML = `
-            <a href="${d.file}" class="download-item reveal" download>
+            <a href="${d.file}" class="download-item reveal"${isDownload ? ' download' : ''}>
               <div class="download-item__icon">${d.type}</div>
               <div class="download-item__info">
                 <h4>${d.title}</h4>
@@ -498,7 +499,7 @@
       if (footerLogo && site.logo) {
         footerLogo.src = site.logo;
         footerLogo.alt = site.name;
-        withFallback(footerLogo, 'EPAC');
+        withFallback(footerLogo, 'EAC');
       }
       if ($('#footer-verse')) $('#footer-verse').textContent = footer.verse;
       if ($('#footer-copy')) $('#footer-copy').textContent = footer.copyright;
@@ -735,7 +736,7 @@
       startAutoplay();
     }
 
-    /* --- Video Play / Embed On-Demand --- */
+    /* --- Video Play / Embed On-Demand (MP4 or Iframe) --- */
     $$('.media-card__play').forEach(btn => {
       btn.addEventListener('click', function () {
         const embedUrl = this.dataset.embed;
@@ -743,15 +744,27 @@
         const parent = this.closest('.media-card__video');
         if (!parent) return;
 
-        const iframe = document.createElement('iframe');
-        iframe.src = embedUrl + (embedUrl.includes('?') ? '&' : '?') + 'autoplay=1';
-        iframe.title = 'Lecteur vidéo';
-        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
-        iframe.allowFullscreen = true;
-        iframe.className = 'media-card__iframe';
+        if (embedUrl.includes('.mp4')) {
+          const video = document.createElement('video');
+          video.src = embedUrl;
+          video.controls = true;
+          video.autoplay = true;
+          video.playsInline = true;
+          video.className = 'media-card__video-player';
+          parent.innerHTML = '';
+          parent.appendChild(video);
+          video.play().catch(() => {});
+        } else {
+          const iframe = document.createElement('iframe');
+          iframe.src = embedUrl + (embedUrl.includes('?') ? '&' : '?') + 'autoplay=1';
+          iframe.title = 'Lecteur vidéo';
+          iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+          iframe.allowFullscreen = true;
+          iframe.className = 'media-card__iframe';
 
-        parent.innerHTML = '';
-        parent.appendChild(iframe);
+          parent.innerHTML = '';
+          parent.appendChild(iframe);
+        }
       });
     });
 
@@ -773,7 +786,7 @@
                 Merci pour votre précieux message !
               </h3>
               <p style="color:var(--c-gray-600);line-height:1.6;">
-                L'équipe d'Ensemble Pour un Avenir Certain (EPAC) vous répondra avec joie dans les meilleurs délais.
+                L'équipe d'Ensemble pour un Avenir Certain (EAC) vous répondra avec joie dans les meilleurs délais.
               </p>
             </div>`;
         }, 900);
