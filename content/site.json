@@ -1,8 +1,8 @@
 {
   "site": {
-    "name": "Ensemble pour un Avenir Certain (EAC)",
-    "shortName": "EAC Togo",
-    "tagline": "Association à but non lucratif au Togo œuvrant pour l'épanouissement et l'avenir des enfants vulnérables",
+    "name": "Ensemble pour un avenir certain",
+    "shortName": "EAC",
+    "tagline": "Association à but non lucratif œuvrant pour l'épanouissement et l'avenir des enfants vulnérables",
     "logo": "assets/logo.jpg",
     "nav": [
       {
@@ -41,7 +41,7 @@
     ]
   },
   "hero": {
-    "headline": "Chaque enfant togolais porte en lui la promesse d'un avenir certain",
+    "headline": "Chaque enfant porte en lui la promesse d'un avenir certain",
     "subheadline": "Ensemble pour un Avenir Certain (EAC) contribue, par des actions concrètes et solidaires, à l'amélioration des conditions de vie et d'épanouissement des enfants en situation de vulnérabilité au Togo — par l'éducation, le soutien alimentaire et l'inclusion.",
     "cta": {
       "text": "Faire un don solidaire",
@@ -51,8 +51,8 @@
       "text": "Découvrir notre mission",
       "href": "#mission"
     },
-    "image": "images/uploads/mere-enfant-sac-eac.jpg",
-    "imageAlt": "Bénévole EAC remettant un kit scolaire à un enfant lors d'une distribution solidaire"
+    "image": "images/uploads/image_corrigee.png",
+    "imageAlt": "Ensemble pour un Avenir Certain (EAC) — Éducation et solidarité au Togo"
   },
   "stats": [
     {
@@ -61,7 +61,7 @@
       "label": "Kits scolaires distribués"
     },
     {
-      "value": 9,
+      "value": 10,
       "suffix": "",
       "label": "Membres actifs et bénévoles"
     },
@@ -107,40 +107,74 @@
       {
         "title": "Distribution de kits scolaires",
         "text": "Réduire les obstacles matériels auxquels sont confrontés les enfants issus de familles modestes en distribuant des kits scolaires complets, du matériel pédagogique et des fournitures essentielles.",
-        "icon": "🎓",
-        "size": "large"
+        "icon": "🎒"
       },
       {
         "title": "Soutien alimentaire solidaire",
         "text": "Contribuer ponctuellement à l'amélioration des conditions alimentaires des enfants et familles vulnérables, à travers des distributions ciblées de produits de première nécessité.",
-        "icon": "🍲",
-        "size": "small"
+        "icon": "🍲"
       },
       {
         "title": "Inclusion des enfants handicapés",
         "text": "Développer des actions en faveur des enfants en situation de handicap dans les domaines du soutien social, de l'inclusion, de l'éducation et de l'accès aux besoins essentiels.",
-        "icon": "♿",
-        "size": "small"
+        "icon": "♿"
       },
       {
         "title": "Protection & Bien-être de l'enfant",
         "text": "Promouvoir un environnement dans lequel les enfants sont protégés contre les différentes formes de violence, de discrimination, d'exploitation et de négligence.",
-        "icon": "🛡️",
-        "size": "medium"
+        "icon": "🛡️"
       },
       {
         "title": "Sensibilisation communautaire",
         "text": "Mener et soutenir des actions de sensibilisation destinées aux communautés, aux familles et aux différents acteurs concernés par la protection et le bien-être des enfants.",
-        "icon": "📢",
-        "size": "medium"
+        "icon": "📢"
       },
       {
         "title": "Partenariats & Autonomisation",
         "text": "Développer des partenariats fondés sur la confiance, la transparence et la complémentarité avec des ONG, fondations, entreprises et institutions pour un impact durable.",
-        "icon": "🤝",
-        "size": "small"
+        "icon": "🤝"
       }
-    ]
+    ],
+    "sponsorship": {
+      "badge": "Programme Clé de Solidarité",
+      "title": "Le Programme de Parrainage EAC",
+      "subtitle": "Créez un lien direct et bienveillant avec un enfant. Choisissez la formule qui correspond à votre engagement :",
+      "types": [
+        {
+          "id": "parrainage-total",
+          "title": "Parrainage Total",
+          "tag": "Accompagnement Intégral",
+          "highlight": true,
+          "icon": "🌟",
+          "description": "Prise en charge complète couvrant la scolarité intégrale (inscription, kits scolaires, manuels, uniforme) et l'assurance de repas réguliers et équilibrés pour l'enfant parrainé tout au long de l'année.",
+          "details": "Scolarité complète + Repas réguliers + Suivi scolaire personnalisé",
+          "linkText": "Parrainer totalement un enfant →",
+          "href": "#donation"
+        },
+        {
+          "id": "parrainage-partiel",
+          "title": "Parrainage Partiel",
+          "tag": "Soutien Scolarité",
+          "highlight": false,
+          "icon": "📚",
+          "description": "Prise en charge couvrant la scolarité uniquement : frais d'inscription scolaire, sac et fournitures complètes, afin de lui garantir l'accès continu et serein à l'école.",
+          "details": "Scolarité uniquement + Fournitures & Uniforme",
+          "linkText": "Parrainer la scolarité →",
+          "href": "#donation"
+        },
+        {
+          "id": "parrainage-ponctuel",
+          "title": "Parrainage Ponctuel",
+          "tag": "Urgence & Coup de Pouce",
+          "highlight": false,
+          "icon": "🤝",
+          "description": "Prise en charge couvrant des besoins essentiels pour une situation ou un problème particulier (soins de santé d'urgence, matériel pédagogique spécifique, secours exceptionnel) en une seule intervention.",
+          "details": "Aide ciblée versée en une seule fois",
+          "linkText": "Apporter un soutien ponctuel →",
+          "href": "#donation"
+        }
+      ]
+    }
   },
   "projets": {
     "title": "Nos Projets 2026-2027",
@@ -166,7 +200,20 @@
         "raised": "Collecte en cours",
         "image": "images/uploads/remise-kit-petites-filles.jpg",
         "imageAlt": "Bénévole EAC remettant un kit à deux petites filles lors d'un événement solidaire",
-        "description": "Distribution de kits alimentaires à 50 enfants en situation de handicap issus de familles vulnérables. Une nouvelle étape dans l'engagement inclusif de l'association."
+        "description": "Distribution de kits alimentaires à 50 enfants en situation de handicap issus de familles vulnérables. Une nouvelle étape dans l'engagement inclusif de l'association.",
+        "imagePosition": "center top"
+      },
+      {
+        "title": "Noël Solidaire 2026 — Enfants orphelins",
+        "category": "Solidarité & Protection",
+        "status": "En préparation",
+        "progress": 35,
+        "target": "50 enfants orphelins ciblés",
+        "raised": "Collecte en cours",
+        "image": "images/uploads/remise-kit-enfant-fille.jpg",
+        "imagePosition": "center top",
+        "imageAlt": "Bénévole EAC remettant un kit à une jeune fille orpheline",
+        "description": "Distribution de kits alimentaires, vêtements et cadeaux festifs pour partager la joie de Noël avec 50 enfants orphelins et leur apporter tendresse, écoute et dignité."
       },
       {
         "title": "Extension des actions aux régions du Togo",
@@ -211,19 +258,119 @@
     ],
     "methods": [
       {
-        "name": "T-Money & Moov Flooz (Togo)",
+        "id": "kofi",
+        "name": "Don en Ligne via Ko-fi",
+        "tag": "⭐ Recommandé • 0% de frais",
+        "highlight": true,
+        "icon": "☕",
+        "details": "Solution simple, rapide et 100% intégrale : aucun frais de commission de plateforme n'est prélevé. Chaque centime versé bénéficie directement aux enfants sur le terrain.",
+        "features": [
+          "0% de frais : 100% du don parvient à EAC Togo",
+          "Don ponctuel en 1 clic ou soutien mensuel libre",
+          "Cartes bancaires (Stripe), PayPal, Apple Pay & Google Pay"
+        ],
+        "link": "https://ko-fi.com/eactogo",
+        "linkText": "Faire un don sur Ko-fi (Sans frais) →"
+      },
+      {
+        "id": "crypto",
+        "name": "Cryptomonnaies & NOWPayments",
+        "tag": "🌐 Anonyme & Mondial",
+        "highlight": false,
+        "icon": "₿",
+        "details": "Faites un don en Bitcoin, Litecoin, USDT et +50 cryptomonnaies en toute confidentialité, sans intermédiaire bancaire et accessible dans le monde entier.",
+        "features": [
+          "BTC, LTC, USDT (BEP20 / TRC20), ETH et +50 devises",
+          "Règlement anonyme, sécurisé et instantané",
+          "Passerelle sécurisée NOWPayments ou transfert direct"
+        ],
+        "wallets": [
+          {
+            "coin": "Bitcoin (BTC)",
+            "network": "Réseau Bitcoin",
+            "address": "bc1q9yeac0034tg2026certaine7m2kpl98zxa"
+          },
+          {
+            "coin": "Ethereum / USDT",
+            "network": "ERC20 / BEP20",
+            "address": "0x71C5A89EaC2026AvenirCertain0034LomeTogo"
+          },
+          {
+            "coin": "USDT (TRC20)",
+            "network": "Réseau Tron (TRC20)",
+            "address": "TYeac2026AvenirCertainTogoMaritimeLome"
+          },
+          {
+            "coin": "Litecoin (LTC)",
+            "network": "Réseau Litecoin",
+            "address": "ltc1qeac2026avenircertaintogomaritimetg"
+          }
+        ],
+        "nowpayments": {
+          "link": "https://nowpayments.io/donation/YOUR_DONATION_LINK",
+          "linkText": "Faire un don via NOWPayments →"
+        }
+      },
+      {
+        "id": "dpogroup",
+        "name": "Passerelle DPO Group",
+        "tag": "📱 Mobile Money & Cartes Afrique",
+        "highlight": false,
+        "icon": "💳",
+        "details": "Passerelle sécurisée panafricaine (Network International) conçue pour les donateurs résidant en Afrique ou dans la diaspora, acceptant tous les moyens mobiles locaux.",
+        "features": [
+          "Priorité Mobile Money : MTN MoMo, Moov, Orange, M-Pesa, Wave, T-Money",
+          "Cartes bancaires internationales : Visa, Mastercard, American Express",
+          "Multi-devises (XOF, EUR, USD, KES, GHS...) & Sécurité PCI-DSS 1"
+        ],
+        "link": "https://secure.dpogroup.com/",
+        "linkText": "Payer par Mobile Money / Carte →",
+        "infoLink": "https://dpogroup.com/payment-methods/"
+      },
+      {
+        "id": "tmoney",
+        "name": "T-Money & Moov Flooz",
+        "tag": "🇹🇬 Local Togo & UEMOA",
+        "highlight": false,
         "icon": "📱",
-        "details": "Numéro officiel EAC Togo : +228 91 07 51 22 (Préciser votre Nom en motif)"
+        "details": "Versement direct sans intermédiaire pour les donateurs au Togo ou dans l'espace UEMOA via les services de transfert mobile officiels de l'association.",
+        "features": [
+          "Numéro officiel EAC : +228 91 07 51 22",
+          "Nom du compte destinataire : EAC Togo",
+          "Précisez votre Nom et Prénom en motif de transfert"
+        ],
+        "phone": "+228 91 07 51 22",
+        "linkText": "Copier le numéro (+228 91 07 51 22)"
       },
       {
-        "name": "Virement Bancaire (International & UEMOA)",
+        "id": "bank",
+        "name": "Virement Bancaire Officiel",
+        "tag": "🏛️ Compte Bancaire",
+        "highlight": false,
         "icon": "🏦",
-        "details": "Coordonnées bancaires disponibles sur demande — contactez avenircertain2026@gmail.com"
+        "details": "Idéal pour les particuliers, fondations, ONG ou entreprises souhaitant effectuer un virement bancaire formel et traçable depuis la zone UEMOA ou l'international.",
+        "features": [
+          "Coordonnées bancaires officielles (RIB / IBAN / BIC)",
+          "Attestation de don officiel délivrée pour votre comptabilité",
+          "Traçabilité intégrale dans les rapports de gestion d'EAC"
+        ],
+        "link": "#contact",
+        "linkText": "Demander le RIB / Coordonnées officielles →"
       },
       {
-        "name": "Partenariat & Dons en nature",
-        "icon": "🤝",
-        "details": "ONG, associations, fondations et entreprises : contactez directement notre direction pour conventionner votre soutien"
+        "id": "partnership",
+        "name": "Partenariat & Dons en Nature",
+        "tag": "🤝 Matériel & Mécénat",
+        "highlight": false,
+        "icon": "📦",
+        "details": "Soutenez nos actions par des dons de kits scolaires, sacs, denrées alimentaires, matériel médical ou par une convention formelle de mécénat solidaire.",
+        "features": [
+          "Dons matériels (fournitures scolaires, denrées de première nécessité)",
+          "Convention de partenariat sur-mesure pour votre organisation",
+          "Visibilité et valorisation éthique de votre engagement"
+        ],
+        "link": "#contact",
+        "linkText": "Proposer un don matériel ou partenariat →"
       }
     ]
   },

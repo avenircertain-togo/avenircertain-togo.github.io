@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Ensemble pour un Avenir Certain (EAC) — Association à but non lucratif au Togo œuvrant pour l'épanouissement et l'avenir des enfants vulnérables par l'éducation, le soutien alimentaire et l'inclusion.">
+  <meta name="description" content="Ensemble pour un Avenir Certain (EAC) — Association à but non lucratif œuvrant pour l'épanouissement et l'avenir des enfants vulnérables par l'éducation, le soutien alimentaire et l'inclusion.">
   <meta name="theme-color" content="#1B6B93">
 
   <!-- Open Graph / Meta -->
@@ -11,7 +11,7 @@
   <meta property="og:description" content="Association humanitaire à but non lucratif au Togo œuvrant pour l'épanouissement et l'avenir des enfants vulnérables.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://avenircertain-togo.github.io/">
-  <meta property="og:image" content="images/uploads/mere-enfant-sac-eac.jpg">
+  <meta property="og:image" content="images/uploads/image_corrigee.png">
   <meta property="og:locale" content="fr_FR">
 
   <link rel="canonical" href="https://avenircertain-togo.github.io/">
@@ -44,8 +44,11 @@
   }
   </script>
 
-  <!-- Favicon SVG inline -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+  <!-- Favicon / Logo Onglet Navigateur EAC -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 
   <!-- Google Fonts: DM Serif Display + Inter — optimized loading -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -67,8 +70,8 @@
   <!-- ===== TOP ANNOUNCEMENT BAR ===== -->
   <aside class="topbar">
     <div class="topbar__inner">
-      <span class="topbar__badge">❤️ Solidarité Togo</span>
-      <span class="topbar__text">Rejoignez la mission d'espérance pour les enfants vulnérables au Togo</span>
+      <span class="topbar__badge">❤️ Solidarité</span>
+      <span class="topbar__text">Rejoignez la mission d'espérance pour les enfants vulnérables</span>
       <a href="#donation" class="topbar__link">Faire un don direct &rarr;</a>
     </div>
   </aside>
@@ -81,8 +84,11 @@
           <img id="header-logo" src="assets/logo.jpg" alt="Logo EAC" width="64" height="64">
         </div>
         <div class="header__brand">
-          <span class="header__brand-full" id="header-name">Ensemble Pour un Avenir Certain</span>
-          <span class="header__brand-acronym"><span class="badge badge--gold">EAC</span> Togo</span>
+          <span class="header__brand-full" id="header-name">Ensemble pour un avenir certain</span>
+          <span class="header__brand-acronym">
+            <span class="badge badge--eac">EAC</span>
+            <span class="brand-tagline">Solidarité &bull; Dignité</span>
+          </span>
         </div>
       </a>
 
@@ -106,7 +112,7 @@
     <!-- ===== HERO (asymétrique moderne & valorisant) ===== -->
     <section class="hero" id="accueil">
       <div class="hero__image-wrap">
-        <img id="hero-img" src="images/uploads/mere-enfant-sac-eac.jpg" alt="Bénévole EAC remettant un kit scolaire à un enfant lors d'une distribution solidaire" class="hero__image" loading="eager" width="900" height="600">
+        <img id="hero-img" src="images/uploads/image_corrigee.png" alt="Bénévole EAC remettant un kit scolaire à un enfant lors d'une distribution solidaire" class="hero__image" loading="eager" width="900" height="600">
         <div class="hero__image-badge">
           <span class="hero__badge-icon">✨</span>
           <div class="hero__badge-text">
@@ -148,14 +154,19 @@
       </div>
     </section>
 
-    <!-- ===== PROGRAMMES (bento grid) ===== -->
+    <!-- ===== PROGRAMMES & PARRAINAGE ===== -->
     <section class="section programmes" id="programmes">
       <div class="section__header">
         <span class="section__eyebrow">Actions Concrètes</span>
         <h2 id="prog-title" class="section__title"></h2>
         <p id="prog-sub" class="section__subtitle"></p>
       </div>
-      <div id="prog-grid" class="bento">
+      <div id="prog-grid" class="programmes__grid">
+        <!-- Filled by JS -->
+      </div>
+
+      <!-- Section Spécifique de Parrainage -->
+      <div id="sponsorship-block" class="sponsorship">
         <!-- Filled by JS -->
       </div>
     </section>
@@ -200,7 +211,7 @@
         </div>
 
         <div class="donation__box">
-          <h3 class="donation__box-title">Canaux officiels de versement</h3>
+          <h3 class="donation__box-title">Canaux officiels de réception des donations et soutiens divers</h3>
           <p class="donation__box-desc">Chaque don est tracé avec rigueur et transparent dans nos rapports annuels.</p>
           <div id="don-methods" class="donation__methods">
             <!-- Filled by JS -->
@@ -333,7 +344,7 @@
           <img id="footer-logo" class="footer__logo" src="assets/logo.jpg" alt="Logo EAC" width="90" height="90">
         </div>
         <h3 class="footer__title">Ensemble pour un Avenir Certain (EAC)</h3>
-        <p class="footer__motto">Association à but non lucratif au Togo œuvrant pour l'épanouissement des enfants vulnérables</p>
+        <p class="footer__motto">Association à but non lucratif œuvrant pour l'épanouissement des enfants vulnérables</p>
       </div>
 
       <p id="footer-verse" class="footer__verse"></p>

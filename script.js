@@ -171,47 +171,74 @@
       const mBlocks = $('#mission-blocks');
       if (mBlocks && mission.blocks) {
         mBlocks.innerHTML = '';
-        mission.blocks.forEach(b => {
+        mission.blocks.forEach((b, i) => {
           const div = document.createElement('div');
           div.className = 'mission__block reveal';
-          const img = document.createElement('img');
-          img.src = b.image;
-          img.alt = b.imageAlt || b.title;
-          img.loading = 'lazy';
-          withFallback(img, b.title);
-
           div.innerHTML = `
-            <div class="mission__block-img"></div>
+            <div class="mission__block-img">
+              <img class="mission__block-backdrop" src="${b.image}" aria-hidden="true" alt="">
+              <img class="mission__block-main" src="${b.image}" alt="${b.imageAlt || b.title}" loading="lazy">
+            </div>
             <div class="mission__block-text">
-              <span class="mission__block-badge">Pilier d'action</span>
+              <span class="mission__block-badge">Pilier d'action ${i + 1}</span>
               <h3>${b.title}</h3>
               <p>${b.text}</p>
             </div>`;
-          div.querySelector('.mission__block-img').appendChild(img);
+          const mainImg = div.querySelector('.mission__block-main');
+          withFallback(mainImg, b.title);
           mBlocks.appendChild(div);
         });
       }
     }
 
-    /* --- Programmes (Bento Grid) --- */
+    /* --- Programmes & Parrainage --- */
     if (programmes) {
       if ($('#prog-title')) $('#prog-title').textContent = programmes.title;
       if ($('#prog-sub')) $('#prog-sub').textContent = programmes.subtitle;
-      const bento = $('#prog-grid');
-      if (bento && programmes.items) {
-        bento.innerHTML = '';
+      const progGrid = $('#prog-grid');
+      if (progGrid && programmes.items) {
+        progGrid.innerHTML = '';
         programmes.items.forEach(p => {
           const div = document.createElement('div');
-          let sizeClass = '';
-          if (p.size === 'large')  sizeClass = ' bento__tile--large';
-          if (p.size === 'medium') sizeClass = ' bento__tile--medium';
-          div.className = `bento__tile${sizeClass} reveal`;
+          div.className = 'program-card reveal';
           div.innerHTML = `
-            <span class="bento__icon">${p.icon}</span>
-            <h3>${p.title}</h3>
-            <p>${p.text}</p>`;
-          bento.appendChild(div);
+            <div class="program-card__icon">${p.icon}</div>
+            <div class="program-card__body">
+              <h3>${p.title}</h3>
+              <p>${p.text}</p>
+            </div>`;
+          progGrid.appendChild(div);
         });
+      }
+
+      /* Bloc Parrainage Spécifique */
+      const sponsorBox = $('#sponsorship-block');
+      if (sponsorBox && programmes.sponsorship) {
+        const s = programmes.sponsorship;
+        sponsorBox.innerHTML = `
+          <div class="sponsorship__header">
+            <span class="sponsorship__badge">${s.badge}</span>
+            <h3 class="sponsorship__title">${s.title}</h3>
+            <p class="sponsorship__subtitle">${s.subtitle}</p>
+          </div>
+          <div class="sponsorship__grid">
+            ${s.types.map(t => `
+              <div class="sponsorship-card ${t.highlight ? 'sponsorship-card--featured' : ''} reveal">
+                <div class="sponsorship-card__top">
+                  <span class="sponsorship-card__tag">${t.tag}</span>
+                  <div class="sponsorship-card__icon">${t.icon}</div>
+                </div>
+                <h4 class="sponsorship-card__title">${t.title}</h4>
+                <p class="sponsorship-card__desc">${t.description}</p>
+                <div class="sponsorship-card__details">
+                  <span>${t.details}</span>
+                </div>
+                <a href="${t.href || '#donation'}" class="btn ${t.highlight ? 'btn--primary' : 'btn--outline'} btn--sm btn--full sponsorship-card__btn">
+                  ${t.linkText}
+                </a>
+              </div>
+            `).join('')}
+          </div>`;
       }
     }
 
@@ -225,15 +252,11 @@
         projets.items.forEach(item => {
           const card = document.createElement('div');
           card.className = 'project-card reveal';
-          const img = document.createElement('img');
-          img.className = 'project-card__img';
-          img.src = item.image;
-          img.alt = item.imageAlt || item.title;
-          img.loading = 'lazy';
-          withFallback(img, item.title);
+          const posStyle = item.imagePosition ? ` style="object-position: ${item.imagePosition};"` : '';
 
           card.innerHTML = `
             <div class="project-card__media">
+              <img class="project-card__img" src="${item.image}" alt="${item.imageAlt || item.title}" loading="lazy"${posStyle}>
               <span class="project-card__tag">${item.category}</span>
             </div>
             <div class="project-card__body">
@@ -257,7 +280,8 @@
                 Participer à ce projet &rarr;
               </a>
             </div>`;
-          card.querySelector('.project-card__media').appendChild(img);
+          const mainImg = card.querySelector('.project-card__img');
+          withFallback(mainImg, item.title);
           projGrid.appendChild(card);
         });
       }
@@ -298,16 +322,142 @@
       if (methodsList && donation.methods) {
         methodsList.innerHTML = '';
         donation.methods.forEach(m => {
-          const div = document.createElement('div');
-          div.className = 'donation-method';
-          div.innerHTML = `
-            <span class="donation-method__icon">${m.icon}</span>
-            <div class="donation-method__content">
-              <strong>${m.name}</strong>
-              <p>${m.details}</p>
-            </div>`;
-          methodsList.appendChild(div);
+          const card = document.createElement('div');
+          card.className = `donation-card ${m.highlight ? 'donation-card--featured' : ''} reveal`;
+
+          // Features list
+          let featuresHtml = '';
+          if (m.features && m.features.length) {
+            featuresHtml = `
+              <ul class="donation-card__features">
+                ${m.features.map(f => `<li><span class="feat-check">✓</span><span>${f}</span></li>`).join('')}
+              </ul>`;
+          }
+
+          // Action button
+          let actionHtml = '';
+          if (m.id === 'kofi') {
+            actionHtml = `
+              <a href="${m.link || 'https://ko-fi.com/eactogo'}" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm btn--full donation-card__btn">
+                ${m.linkText || 'Faire un don via Ko-fi →'}
+              </a>`;
+          } else if (m.id === 'crypto') {
+            actionHtml = `
+              <div class="crypto-action-box">
+                <a href="${m.nowpayments ? m.nowpayments.link : '#'}" target="_blank" rel="noopener noreferrer" class="btn btn--secondary btn--sm btn--full donation-card__btn" style="margin-bottom:8px;">
+                  ${(m.nowpayments && m.nowpayments.linkText) || 'Faire un don via NOWPayments →'}
+                </a>
+                <button type="button" class="btn btn--outline btn--sm btn--full btn-toggle-wallets" id="btn-toggle-wallets" aria-expanded="false">
+                  Voir les adresses directes (BTC, USDT...) ▾
+                </button>
+                <div class="crypto-wallets-pop is-hidden" id="crypto-wallets-list">
+                  ${(m.wallets || []).map(w => `
+                    <div class="crypto-wallet-item">
+                      <div class="crypto-wallet-item__info">
+                        <strong>${w.coin}</strong>
+                        <span class="crypto-network">${w.network}</span>
+                      </div>
+                      <div class="crypto-wallet-item__addr-wrap">
+                        <code class="crypto-address">${w.address}</code>
+                        <button type="button" class="btn-copy-address" data-copy="${w.address}" title="Copier l'adresse">
+                          <span class="copy-text">Copier</span>
+                        </button>
+                      </div>
+                    </div>
+                  `).join('')}
+                </div>
+              </div>`;
+          } else if (m.id === 'dpogroup') {
+            actionHtml = `
+              <div class="dpo-action-box">
+                <a href="${m.link || 'https://secure.dpogroup.com/'}" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm btn--full donation-card__btn">
+                  ${m.linkText || 'Payer via DPO Group →'}
+                </a>
+                <a href="${m.infoLink || 'https://dpogroup.com/payment-methods/'}" target="_blank" rel="noopener noreferrer" class="dpo-sublink">
+                  Moyens acceptés par DPO Group ↗
+                </a>
+              </div>`;
+          } else if (m.id === 'tmoney') {
+            actionHtml = `
+              <button type="button" class="btn btn--outline btn--sm btn--full btn-copy-phone donation-card__btn" data-copy="${m.phone || '+22891075122'}">
+                <span class="copy-phone-text">📋 Copier le numéro (+228 91 07 51 22)</span>
+              </button>`;
+          } else {
+            actionHtml = `
+              <a href="${m.link || '#contact'}" class="btn btn--outline btn--sm btn--full donation-card__btn">
+                ${m.linkText || 'Contacter notre équipe →'}
+              </a>`;
+          }
+
+          card.innerHTML = `
+            <div class="donation-card__top">
+              <span class="donation-card__tag">${m.tag}</span>
+              <div class="donation-card__icon">${m.icon}</div>
+            </div>
+            <h4 class="donation-card__title">${m.name}</h4>
+            <p class="donation-card__desc">${m.details}</p>
+            ${featuresHtml}
+            <div class="donation-card__action">
+              ${actionHtml}
+            </div>
+          `;
+          methodsList.appendChild(card);
         });
+
+        // Copy crypto addresses
+        methodsList.querySelectorAll('.btn-copy-address').forEach(btn => {
+          btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const textToCopy = this.getAttribute('data-copy');
+            if (navigator.clipboard && textToCopy) {
+              navigator.clipboard.writeText(textToCopy).then(() => {
+                const label = this.querySelector('.copy-text');
+                const prev = label.textContent;
+                label.textContent = '✓ Copié !';
+                this.classList.add('is-copied');
+                setTimeout(() => {
+                  label.textContent = prev;
+                  this.classList.remove('is-copied');
+                }, 2000);
+              });
+            }
+          });
+        });
+
+        // Copy phone
+        methodsList.querySelectorAll('.btn-copy-phone').forEach(btn => {
+          btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const textToCopy = this.getAttribute('data-copy');
+            if (navigator.clipboard && textToCopy) {
+              navigator.clipboard.writeText(textToCopy).then(() => {
+                const label = this.querySelector('.copy-phone-text');
+                const prev = label.textContent;
+                label.textContent = '✓ Numéro copié ! (+228 91 07 51 22)';
+                this.style.background = '#2E7D32';
+                this.style.color = '#FFFFFF';
+                setTimeout(() => {
+                  label.textContent = prev;
+                  this.style.background = '';
+                  this.style.color = '';
+                }, 2200);
+              });
+            }
+          });
+        });
+
+        // Toggle crypto wallet addresses popdown
+        const toggleBtn = $('#btn-toggle-wallets');
+        const walletsList = $('#crypto-wallets-list');
+        if (toggleBtn && walletsList) {
+          toggleBtn.addEventListener('click', function() {
+            const isHidden = walletsList.classList.toggle('is-hidden');
+            this.setAttribute('aria-expanded', !isHidden);
+            this.textContent = isHidden
+              ? 'Voir les adresses directes (BTC, USDT...) ▾'
+              : 'Masquer les adresses directes ▴';
+          });
+        }
       }
     }
 
