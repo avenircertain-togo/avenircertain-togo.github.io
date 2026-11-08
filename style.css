@@ -1544,9 +1544,12 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   }
   .bento__tile--large { grid-column: span 2; }
 
-  /* Projets 3 colonnes */
+  /* Projets 3 colonnes avec centrage du dernier projet s'il est isolé sur la rangée */
   .projets__grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .projets__grid > .project-card:last-child:nth-child(3n + 1) {
+    grid-column: 2;
   }
 
   /* Donation Hero Desktop Showcase */

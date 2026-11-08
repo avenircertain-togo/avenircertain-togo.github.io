@@ -233,7 +233,7 @@
                 <div class="sponsorship-card__details">
                   <span>${t.details}</span>
                 </div>
-                <a href="${t.href || '#donation'}" class="btn ${t.highlight ? 'btn--primary' : 'btn--outline'} btn--sm btn--full sponsorship-card__btn">
+                <a href="${t.href || '#contact'}" class="btn ${t.highlight ? 'btn--primary' : 'btn--outline'} btn--sm btn--full sponsorship-card__btn">
                   ${t.linkText}
                 </a>
               </div>
@@ -276,9 +276,10 @@
                   <span>Objectif : ${item.target}</span>
                 </div>
               </div>
+              ${(item.status || '').toLowerCase().includes('réalisé') || (item.status || '').toLowerCase().includes('realise') ? '' : `
               <a href="#donation" class="btn btn--outline btn--sm btn--full" style="margin-top:1rem;">
                 Participer à ce projet &rarr;
-              </a>
+              </a>`}
             </div>`;
           const mainImg = card.querySelector('.project-card__img');
           withFallback(mainImg, item.title);

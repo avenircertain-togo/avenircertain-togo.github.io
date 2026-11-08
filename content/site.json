@@ -73,7 +73,7 @@
     {
       "value": 50,
       "suffix": "+",
-      "label": "Enfants handicapés soutenus (Noël 2026)"
+      "label": "Enfants en situation de handicap soutenus (Noël 2026)"
     }
   ],
   "mission": {
@@ -81,14 +81,14 @@
     "verse": "« Les conditions de vie d'un enfant ne devraient pas déterminer définitivement ses possibilités d'avenir. » — EAC Togo",
     "blocks": [
       {
-        "title": "Soutien à la scolarisation & Dignité",
-        "text": "Nous croyons que l'éducation est le levier le plus puissant pour briser le cycle de la pauvreté. À Lomé et dans le canton de Baguida, nous distribuons des kits scolaires complets, du matériel pédagogique et apportons un soutien ponctuel aux enfants particulièrement vulnérables issus de familles modestes. Notre première opération a permis de distribuer 100 kits scolaires à 100 enfants en août 2026.",
+        "title": "Soutien à la scolarisation & à la Dignité",
+        "text": "Nous croyons que l'éducation est le levier le plus puissant pour briser le cycle de la pauvreté. À Lomé et ses environs, nous distribuons des kits scolaires complets, du matériel pédagogique et apportons un soutien ponctuel aux enfants particulièrement vulnérables issus de familles modestes. Notre première opération a permis de distribuer 100 kits scolaires à 100 enfants en août 2026.",
         "image": "images/uploads/medium-shot-kid-writing-board.jpg",
         "imageAlt": "Élève africain participant activement au tableau noir en classe"
       },
       {
         "title": "Soutien alimentaire & Bien-être intégral",
-        "text": "Grandir en pleine santé est un droit fondamental. L'association souhaite contribuer ponctuellement à l'amélioration des conditions alimentaires des enfants et familles particulièrement vulnérables, notamment à travers des distributions ciblées de produits de première nécessité. Le projet « Noël Solidaire 2026 » prévoit la distribution de kits alimentaires à 50 enfants en situation de handicap.",
+        "text": "Grandir en pleine santé est un droit fondamental. L'association souhaite contribuer à l'amélioration des conditions alimentaires des enfants et familles particulièrement vulnérables, notamment à travers des distributions ciblées de produits de première nécessité. Le projet « Noël Solidaire 2026 » prévoit la distribution de kits alimentaires à 50 enfants en situation de handicap.",
         "image": "images/uploads/distribution-kits-scolaires.jpg",
         "imageAlt": "Bénévole EAC préparant la distribution de kits aux familles"
       },
@@ -111,11 +111,11 @@
       },
       {
         "title": "Soutien alimentaire solidaire",
-        "text": "Contribuer ponctuellement à l'amélioration des conditions alimentaires des enfants et familles vulnérables, à travers des distributions ciblées de produits de première nécessité.",
+        "text": "Contribuer à l'amélioration des conditions alimentaires des enfants et familles vulnérables, à travers des distributions ciblées de produits de première nécessité.",
         "icon": "🍲"
       },
       {
-        "title": "Inclusion des enfants handicapés",
+        "title": "Inclusion des enfants en situation de handicap",
         "text": "Développer des actions en faveur des enfants en situation de handicap dans les domaines du soutien social, de l'inclusion, de l'éducation et de l'accès aux besoins essentiels.",
         "icon": "♿"
       },
@@ -149,7 +149,7 @@
           "description": "Prise en charge complète couvrant la scolarité intégrale (inscription, kits scolaires, manuels, uniforme) et l'assurance de repas réguliers et équilibrés pour l'enfant parrainé tout au long de l'année.",
           "details": "Scolarité complète + Repas réguliers + Suivi scolaire personnalisé",
           "linkText": "Parrainer totalement un enfant →",
-          "href": "#donation"
+          "href": "#contact"
         },
         {
           "id": "parrainage-partiel",
@@ -160,7 +160,7 @@
           "description": "Prise en charge couvrant la scolarité uniquement : frais d'inscription scolaire, sac et fournitures complètes, afin de lui garantir l'accès continu et serein à l'école.",
           "details": "Scolarité uniquement + Fournitures & Uniforme",
           "linkText": "Parrainer la scolarité →",
-          "href": "#donation"
+          "href": "#contact"
         },
         {
           "id": "parrainage-ponctuel",
@@ -171,7 +171,7 @@
           "description": "Prise en charge couvrant des besoins essentiels pour une situation ou un problème particulier (soins de santé d'urgence, matériel pédagogique spécifique, secours exceptionnel) en une seule intervention.",
           "details": "Aide ciblée versée en une seule fois",
           "linkText": "Apporter un soutien ponctuel →",
-          "href": "#donation"
+          "href": "#contact"
         }
       ]
     }
@@ -196,7 +196,7 @@
         "category": "Inclusion & Handicap",
         "status": "En préparation",
         "progress": 40,
-        "target": "50 enfants handicapés ciblés",
+        "target": "50 enfants en situation de handicap ciblés",
         "raised": "Collecte en cours",
         "image": "images/uploads/remise-kit-petites-filles.jpg",
         "imageAlt": "Bénévole EAC remettant un kit à deux petites filles lors d'un événement solidaire",
@@ -391,7 +391,7 @@
       "role": "Donateur et soutien de l'opération kits scolaires"
     },
     {
-      "quote": "Le projet Noël Solidaire pour les enfants handicapés est une initiative qui touche au cœur. Notre communauté espère que cette action sera la première d'une longue série.",
+      "quote": "Le projet Noël Solidaire pour les enfants en situation de handicap est une initiative qui touche au cœur. Notre communauté espère que cette action sera la première d'une longue série.",
       "author": "Un éducateur social",
       "role": "Acteur communautaire, Lomé"
     }
@@ -409,7 +409,7 @@
         "link": "#"
       },
       {
-        "title": "Préparation du projet « Noël Solidaire 2026 » pour les enfants handicapés",
+        "title": "Préparation du projet « Noël Solidaire 2026 » pour les enfants en situation de handicap",
         "date": "2026-10-15",
         "image": "images/uploads/remise-kit-enfant-fille.jpg",
         "imageAlt": "Bénévole EAC avec une jeune fille bénéficiaire lors d'un événement de l'association",
@@ -449,7 +449,7 @@
         "excerpt": "Construire avec les communautés plutôt qu'à leur place : retour sur notre première opération où chaque étape — de la mobilisation des ressources à la documentation de l'intervention — a renforcé notre capacité à servir les enfants vulnérables de manière pérenne."
       },
       {
-        "title": "L'inclusion des enfants handicapés : un engagement fondamental",
+        "title": "L'inclusion des enfants en situation de handicap : un engagement fondamental",
         "author": "EAC Togo",
         "date": "2026-09-15",
         "category": "Inclusion & Handicap",
